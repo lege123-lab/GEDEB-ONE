@@ -3,248 +3,120 @@
 <html lang="am">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#075e54">
 <meta name="description" content="GEDEB ONE - Smart Digital City Ecosystem">
-<title>GEDEB ONE | Smart Digital City</title>
+<title>GEDEB ONE | Smart Digital City Ecosystem</title>
 
 <style>
 :root{
- --green:#075e54;
- --green2:#087e70;
- --mint:#e8f6f1;
- --gold:#e8b84a;
- --bg:#f4f7f6;
- --white:#ffffff;
- --ink:#18332f;
- --muted:#71817d;
- --border:#e5ece9;
- --red:#d94848;
- --shadow:0 8px 28px rgba(20,60,50,.08);
+--g:#075e54;--g2:#0b806e;--gold:#e9b949;
+--bg:#f3f7f5;--white:#fff;--ink:#18342f;
+--muted:#71817c;--border:#e3ece8;--mint:#e6f5ef;
+--shadow:0 6px 22px #163d3210;
 }
 *{box-sizing:border-box}
-body{
- margin:0;
- font-family:Arial,"Noto Sans Ethiopic",sans-serif;
- background:var(--bg);
- color:var(--ink);
-}
+body{margin:0;background:var(--bg);color:var(--ink);
+font-family:Arial,"Noto Sans Ethiopic",sans-serif}
 button,input,textarea,select{font:inherit}
 button{cursor:pointer}
-.topbar{
- background:var(--green);
- color:white;
- padding:13px 16px;
- display:flex;
- justify-content:space-between;
- align-items:center;
- position:sticky;
- top:0;
- z-index:20;
- box-shadow:0 3px 12px #0002;
-}
+.topbar{position:sticky;top:0;z-index:20;background:var(--g);
+color:white;padding:12px 15px;display:flex;align-items:center;
+justify-content:space-between;box-shadow:0 3px 12px #0002}
 .brand{display:flex;align-items:center;gap:10px}
-.logo{
- width:43px;height:43px;border-radius:13px;
- background:linear-gradient(135deg,#fff,#d8f5e9);
- color:var(--green);
- display:grid;place-items:center;
- font-weight:900;font-size:19px;
-}
-.brand h1{font-size:18px;margin:0;letter-spacing:1px}
-.brand small{font-size:10px;color:#c9e8dd}
-.top-actions{display:flex;gap:8px}
-.top-btn{
- border:1px solid #ffffff55;
- background:#ffffff15;color:white;
- border-radius:10px;padding:9px 11px;
- font-size:12px;
-}
-.hero{
- margin:15px;
- padding:23px 19px;
- border-radius:22px;
- color:white;
- background:linear-gradient(130deg,#064d46,#087e70 65%,#16a085);
- position:relative;
- overflow:hidden;
- box-shadow:var(--shadow);
-}
-.hero:after{
- content:"";
- position:absolute;
- width:190px;height:190px;
- border:30px solid #ffffff12;
- border-radius:50%;
- right:-55px;top:-65px;
-}
-.hero-tag{
- display:inline-block;
- padding:6px 10px;
- border:1px solid #ffffff55;
- border-radius:20px;
- font-size:11px;
-}
-.hero h2{font-size:25px;line-height:1.35;margin:17px 0 8px;max-width:300px}
-.hero p{font-size:13px;line-height:1.7;color:#d9eee8;max-width:310px}
-.hero-buttons{display:flex;gap:9px;flex-wrap:wrap;margin-top:17px}
-.btn-primary,.btn-light{
- border:0;border-radius:11px;padding:12px 15px;
- font-weight:bold;font-size:13px;
-}
-.btn-primary{background:var(--gold);color:#30240b}
-.btn-light{background:#ffffff1c;color:white;border:1px solid #ffffff55}
-.container{padding:0 15px 95px;max-width:900px;margin:auto}
-.section-head{
- display:flex;justify-content:space-between;
- align-items:center;margin:23px 0 13px;
-}
-.section-head h3{margin:0;font-size:17px}
-.section-head small{color:var(--muted);font-size:11px}
-.stats{
- display:grid;grid-template-columns:repeat(3,1fr);
- gap:9px;margin-top:15px;
-}
-.stat{
- background:white;padding:13px 9px;
- border:1px solid var(--border);
- border-radius:15px;text-align:center;
-}
-.stat strong{display:block;color:var(--green);font-size:20px}
+.logo{width:43px;height:43px;border-radius:13px;background:white;
+color:var(--g);display:grid;place-items:center;font-weight:900;font-size:19px}
+.brand h1{font-size:18px;margin:0}
+.brand small{font-size:9px;color:#c9e8dd}
+.top-actions{display:flex;gap:7px}
+.top-btn{background:#ffffff18;color:white;border:1px solid #ffffff55;
+border-radius:10px;padding:9px 11px;font-size:12px}
+.container{max-width:950px;margin:auto;padding:0 14px 100px}
+.hero{margin:15px 0;padding:25px 20px;border-radius:22px;
+background:linear-gradient(130deg,#064b43,#087e70,#16a085);
+color:white;box-shadow:var(--shadow)}
+.hero-tag{font-size:11px;border:1px solid #ffffff66;
+border-radius:20px;padding:6px 10px;display:inline-block}
+.hero h2{font-size:26px;line-height:1.4;margin:18px 0 8px}
+.hero p{font-size:13px;line-height:1.8;color:#d9eee8}
+.hero-buttons{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}
+.primary,.light,.secondary,.danger{border:0;border-radius:11px;
+padding:12px 15px;font-weight:bold}
+.primary{background:var(--gold);color:#332708}
+.light{background:#ffffff20;color:white;border:1px solid #ffffff55}
+.secondary{background:white;color:var(--g);border:1px solid var(--g)}
+.danger{background:#fff0f0;color:#b52b2b;border:1px solid #f2cccc}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:15px 0}
+.stat,.card,.panel{background:white;border:1px solid var(--border);
+border-radius:16px;box-shadow:var(--shadow)}
+.stat{text-align:center;padding:13px 5px}
+.stat strong{display:block;color:var(--g);font-size:21px}
 .stat span{font-size:10px;color:var(--muted)}
-.grid{
- display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
- gap:11px;
-}
-.service{
- background:white;border:1px solid var(--border);
- border-radius:16px;padding:14px 12px;
- text-align:left;min-height:128px;
- box-shadow:0 3px 12px #163d3210;
- color:var(--ink);
-}
-.service:active{transform:scale(.98)}
-.service-icon{
- width:43px;height:43px;border-radius:13px;
- display:grid;place-items:center;
- background:var(--mint);font-size:22px;
- margin-bottom:10px;
-}
-.service strong{display:block;font-size:13px;margin-bottom:5px}
-.service small{font-size:10px;color:var(--muted);line-height:1.5}
-.panel{
- background:white;border:1px solid var(--border);
- border-radius:17px;padding:16px;margin-top:12px;
-}
-.kebele-grid{
- display:grid;grid-template-columns:repeat(3,1fr);gap:8px;
-}
-.kebele{
- background:var(--mint);border-radius:10px;
- padding:12px 5px;text-align:center;
- font-size:12px;color:var(--green);font-weight:bold;
-}
-.quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
-.quick{
- background:white;border:1px solid var(--border);
- border-radius:13px;padding:13px;
- text-align:left;color:var(--ink);
-}
-.quick span{font-size:22px}
-.quick strong{display:block;font-size:12px;margin-top:7px}
-.quick small{color:var(--muted);font-size:10px}
-.notice{
- border-left:4px solid var(--gold);
- background:#fff9e9;padding:13px;
- border-radius:9px;font-size:12px;line-height:1.7;
-}
+.heading{display:flex;justify-content:space-between;align-items:center;
+margin:23px 0 12px}
+.heading h3{font-size:17px;margin:0}
+.heading small{color:var(--muted);font-size:11px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.card{padding:14px;color:var(--ink);text-align:left;min-height:120px}
+.card .ico{font-size:24px;background:var(--mint);width:44px;height:44px;
+border-radius:13px;display:grid;place-items:center;margin-bottom:9px}
+.card strong{display:block;font-size:13px;margin-bottom:5px}
+.card small{font-size:10px;color:var(--muted);line-height:1.6}
+.panel{padding:16px;margin:12px 0}
 .page{display:none}
 .page.active{display:block}
+.kebele-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.kebele{background:var(--mint);color:var(--g);padding:12px;
+border-radius:10px;font-size:12px;font-weight:bold}
 .form-group{margin:13px 0}
-.form-group label{
- display:block;font-size:12px;font-weight:bold;margin-bottom:7px
-}
+.form-group label{display:block;font-size:12px;font-weight:bold;margin-bottom:7px}
 .form-group input,.form-group textarea,.form-group select{
- width:100%;padding:13px;border:1px solid var(--border);
- border-radius:11px;background:#fbfdfc;outline:none;
- color:var(--ink);
-}
-.form-group textarea{min-height:100px;resize:vertical}
-.form-group input:focus,.form-group textarea:focus{
- border-color:var(--green2);
-}
-.full-btn{
- width:100%;border:0;border-radius:12px;
- padding:14px;background:var(--green);
- color:white;font-weight:bold;margin-top:8px;
-}
-.secondary-btn{
- border:1px solid var(--green);background:white;
- color:var(--green);border-radius:10px;
- padding:10px 13px;font-weight:bold;
-}
-.result{
- background:var(--mint);padding:13px;
- border-radius:12px;margin-top:12px;
- font-size:12px;line-height:1.7;
-}
-.item{
- padding:13px 0;border-bottom:1px solid var(--border);
-}
+width:100%;padding:13px;border:1px solid var(--border);
+border-radius:10px;background:#fbfdfc;color:var(--ink)}
+.form-group textarea{min-height:95px;resize:vertical}
+.full{width:100%;padding:14px;background:var(--g);color:white;
+border:0;border-radius:11px;font-weight:bold}
+.result{padding:13px;background:var(--mint);border-radius:11px;
+font-size:12px;line-height:1.8;margin-top:12px;overflow-wrap:anywhere}
+.notice{background:#fff8e6;border-left:4px solid var(--gold);
+padding:12px;border-radius:9px;font-size:12px;line-height:1.8}
+.item{padding:13px 0;border-bottom:1px solid var(--border)}
 .item:last-child{border:0}
 .item strong{font-size:13px}
-.item p{font-size:11px;color:var(--muted);line-height:1.6}
-.status{
- display:inline-block;background:#fff2d7;color:#916100;
- border-radius:20px;padding:5px 9px;font-size:10px;
-}
-.bottom-nav{
- position:fixed;bottom:0;left:0;right:0;
- background:white;border-top:1px solid var(--border);
- display:flex;justify-content:space-around;
- padding:9px 3px calc(9px + env(safe-area-inset-bottom));
- z-index:30;
-}
-.nav-btn{
- border:0;background:none;color:var(--muted);
- display:flex;flex-direction:column;align-items:center;
- gap:4px;font-size:10px;min-width:55px;
-}
+.item p{font-size:11px;color:var(--muted);line-height:1.7}
+.tag{display:inline-block;padding:5px 9px;background:#fff1d5;
+color:#855d08;border-radius:20px;font-size:10px}
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:30;
+background:white;border-top:1px solid var(--border);
+display:flex;justify-content:space-around;
+padding:8px 2px calc(8px + env(safe-area-inset-bottom))}
+.nav-btn{border:0;background:none;color:var(--muted);
+display:flex;flex-direction:column;align-items:center;gap:4px;
+font-size:10px;min-width:50px}
 .nav-btn span{font-size:20px}
-.nav-btn.active{color:var(--green);font-weight:bold}
-.modal{
- display:none;position:fixed;inset:0;
- background:#102b27a8;z-index:50;
- align-items:flex-end;justify-content:center;
-}
+.nav-btn.active{color:var(--g);font-weight:bold}
+.modal{display:none;position:fixed;inset:0;background:#102b27aa;
+z-index:50;align-items:flex-end;justify-content:center}
 .modal.show{display:flex}
-.modal-box{
- width:100%;max-width:600px;max-height:88vh;
- overflow:auto;background:white;
- border-radius:22px 22px 0 0;padding:20px;
-}
-.modal-head{display:flex;justify-content:space-between;align-items:center}
-.modal-head h3{margin:0;font-size:18px}
-.close{
- border:0;background:#edf3f1;border-radius:50%;
- width:34px;height:34px;font-size:18px;
-}
-.footer{
- text-align:center;color:var(--muted);
- font-size:10px;padding:25px 10px;line-height:1.8;
-}
-.admin-card{
- background:linear-gradient(120deg,#183b35,#075e54);
- color:white;padding:17px;border-radius:15px;
- margin-bottom:12px;
-}
-.admin-card strong{font-size:24px;display:block}
+.modal-box{width:100%;max-width:650px;max-height:90vh;overflow:auto;
+background:white;border-radius:22px 22px 0 0;padding:19px}
+.modal-head{display:flex;align-items:center;justify-content:space-between}
+.modal-head h3{font-size:17px}
+.close{border:0;border-radius:50%;width:35px;height:35px;background:#edf3f1}
+.admin-menu{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.admin-menu button{padding:12px;border:1px solid var(--border);
+background:#f7fbf9;border-radius:10px;color:var(--g);font-weight:bold}
+.admin-section{display:none}
+.admin-section.active{display:block}
+.map-frame{width:100%;height:350px;border:0;border-radius:12px}
+.footer{text-align:center;color:var(--muted);font-size:10px;
+padding:25px;line-height:1.8}
 .hidden{display:none!important}
 @media(min-width:650px){
- .grid{grid-template-columns:repeat(3,1fr)}
- .hero{padding:35px}
- .hero h2{font-size:32px}
- .quick-grid{grid-template-columns:repeat(4,1fr)}
+.grid{grid-template-columns:repeat(3,1fr)}
+.kebele-grid{grid-template-columns:repeat(3,1fr)}
+.hero{padding:35px}
+.hero h2{font-size:32px}
 }
 </style>
 </head>
@@ -260,7 +132,7 @@ button{cursor:pointer}
   </div>
  </div>
  <div class="top-actions">
-  <button class="top-btn" onclick="toggleLanguage()" id="langBtn">EN</button>
+  <button class="top-btn" id="langBtn" onclick="toggleLanguage()">EN</button>
   <button class="top-btn" onclick="openAdmin()">⚙ Admin</button>
  </div>
 </header>
@@ -270,101 +142,70 @@ button{cursor:pointer}
 <!-- HOME -->
 <section id="home" class="page active">
  <div class="hero">
-  <span class="hero-tag" data-am="የወደፊቷ ዲጂታል ገደብ" data-en="THE FUTURE OF DIGITAL GEDEB">የወደፊቷ ዲጂታል ገደብ</span>
+  <span class="hero-tag">SMART DIGITAL GEDEB</span>
   <h2 data-am="እንኳን ወደ GEDEB ONE በደህና መጡ!" data-en="WELCOME TO GEDEB ONE!">እንኳን ወደ GEDEB ONE በደህና መጡ!</h2>
-  <p data-am="የገደብ ከተማና ወረዳ አገልግሎቶችን፣ መረጃዎችንና የልማት እድሎችን በአንድ ዲጂታል መድረክ ያግኙ።"
-  data-en="Access Gedeb services, information and development opportunities through one digital platform.">
-  የገደብ ከተማና ወረዳ አገልግሎቶችን፣ መረጃዎችንና የልማት እድሎችን በአንድ ዲጂታል መድረክ ያግኙ።</p>
+  <p data-am="የገደብ ወረዳና ከተማ አገልግሎቶችን፣ መረጃዎችንና የልማት ዕድሎችን በአንድ ዲጂታል መድረክ ያግኙ።"
+  data-en="Access Gedeb services, information and development opportunities in one digital platform.">የገደብ ወረዳና ከተማ አገልግሎቶችን፣ መረጃዎችንና የልማት ዕድሎችን በአንድ ዲጂታል መድረክ ያግኙ።</p>
   <div class="hero-buttons">
-   <button class="btn-primary" onclick="showPage('services')" data-am="አገልግሎቶችን ይመልከቱ" data-en="Explore Services">አገልግሎቶችን ይመልከቱ</button>
-   <button class="btn-light" onclick="showPage('complaint')" data-am="ቅሬታ ያቅርቡ" data-en="Submit a Complaint">ቅሬታ ያቅርቡ</button>
+   <button class="primary" onclick="showPage('services')">አገልግሎቶችን ይመልከቱ</button>
+   <button class="light" onclick="showPage('complaint')">ቅሬታ ያቅርቡ</button>
   </div>
  </div>
 
  <div class="stats">
-  <div class="stat"><strong>11</strong><span data-am="ቀበሌዎች" data-en="Kebeles">ቀበሌዎች</span></div>
-  <div class="stat"><strong>12</strong><span data-am="የአገልግሎት ክፍሎች" data-en="Service Areas">የአገልግሎት ክፍሎች</span></div>
-  <div class="stat"><strong>24/7</strong><span data-am="ዲጂታል መድረሻ" data-en="Digital Access">ዲጂታል መድረሻ</span></div>
+  <div class="stat"><strong>11</strong><span>ቀበሌዎች</span></div>
+  <div class="stat"><strong>18+</strong><span>ዲጂታል ክፍሎች</span></div>
+  <div class="stat"><strong>24/7</strong><span>ዲጂታል መድረሻ</span></div>
  </div>
 
- <div class="section-head">
-  <h3 data-am="ዋና አገልግሎቶች" data-en="Main Services">ዋና አገልግሎቶች</h3>
-  <small onclick="showPage('services')" style="cursor:pointer;color:var(--green)" data-am="ሁሉንም ይመልከቱ →" data-en="View all →">ሁሉንም ይመልከቱ →</small>
- </div>
+ <div class="heading"><h3>ዋና አገልግሎቶች</h3><small onclick="showPage('services')">ሁሉንም ይመልከቱ →</small></div>
  <div class="grid" id="homeServices"></div>
 
- <div class="section-head">
-  <h3 data-am="ፈጣን አገልግሎቶች" data-en="Quick Access">ፈጣን አገልግሎቶች</h3>
- </div>
- <div class="quick-grid">
-  <button class="quick" onclick="showPage('complaint')"><span>📝</span><strong data-am="ቅሬታ ማቅረብ" data-en="Submit Complaint">ቅሬታ ማቅረብ</strong><small data-am="ችግር ያሳውቁ" data-en="Report an issue">ችግር ያሳውቁ</small></button>
-  <button class="quick" onclick="showPage('track')"><span>🔎</span><strong data-am="ጥያቄ መከታተል" data-en="Track Request">ጥያቄ መከታተል</strong><small data-am="ሁኔታ ይመልከቱ" data-en="Check status">ሁኔታ ይመልከቱ</small></button>
-  <button class="quick" onclick="showPage('market')"><span>☕</span><strong data-am="የቡና ገበያ" data-en="Coffee Market">የቡና ገበያ</strong><small data-am="የገበያ መድረክ" data-en="Market platform">የገበያ መድረክ</small></button>
-  <button class="quick" onclick="showPage('kebeles')"><span>📍</span><strong data-am="ቀበሌዎች" data-en="Kebeles">ቀበሌዎች</strong><small data-am="የአካባቢ መረጃ" data-en="Local information">የአካባቢ መረጃ</small></button>
+ <div class="heading"><h3>ፈጣን መዳረሻ</h3></div>
+ <div class="grid">
+  <button class="card" onclick="showPage('jobs')"><div class="ico">💼</div><strong>የሥራ ዕድሎች</strong><small>የሥራ ማስታወቂያዎች</small></button>
+  <button class="card" onclick="showPage('map')"><div class="ico">🗺️</div><strong>ዲጂታል ካርታ</strong><small>የገደብ ካርታ</small></button>
+  <button class="card" onclick="showPage('ai')"><div class="ico">🤖</div><strong>GEDEB AI</strong><small>ዲጂታል ረዳት</small></button>
+  <button class="card" onclick="showPage('kebeles')"><div class="ico">📍</div><strong>ቀበሌዎች</strong><small>የአካባቢ መረጃ</small></button>
  </div>
 
- <div class="section-head"><h3 data-am="ማስታወቂያ" data-en="Notice">ማስታወቂያ</h3></div>
- <div class="notice" data-am="ይህ GEDEB ONE የመጀመሪያ የማሳያ ስሪት ነው። የመንግሥት ኦፊሴላዊ አገልግሎት ከመሆኑ በፊት የአስተዳደሩ ፈቃድና የተረጋገጠ መረጃ ያስፈልጋል።"
-  data-en="This is the initial GEDEB ONE demonstration version. Official government use requires authorization and verified information.">
-  ይህ GEDEB ONE የመጀመሪያ የማሳያ ስሪት ነው። የመንግሥት ኦፊሴላዊ አገልግሎት ከመሆኑ በፊት የአስተዳደሩ ፈቃድና የተረጋገጠ መረጃ ያስፈልጋል።</div>
+ <div class="heading"><h3>የቅርብ ጊዜ ማስታወቂያዎች</h3></div>
+ <div class="panel" id="homeAnnouncements"></div>
+
+ <div class="notice">GEDEB ONE የፕሮጀክት ማሳያ መድረክ ነው። ኦፊሴላዊ የመንግሥት አገልግሎት ከመሆኑ በፊት የተገቢው አስተዳደር ፈቃድና የተረጋገጠ መረጃ ያስፈልጋል።</div>
 </section>
 
 <!-- SERVICES -->
 <section id="services" class="page">
- <div class="section-head">
-  <h3 data-am="12 ዲጂታል አገልግሎቶች" data-en="12 Digital Services">12 ዲጂታል አገልግሎቶች</h3>
- </div>
+ <div class="heading"><h3>ዲጂታል አገልግሎቶች</h3></div>
  <div class="grid" id="allServices"></div>
 </section>
 
 <!-- KEBELES -->
 <section id="kebeles" class="page">
- <div class="section-head"><h3 data-am="የገደብ 11 ቀበሌዎች" data-en="11 Gedeb Kebeles">የገደብ 11 ቀበሌዎች</h3></div>
+ <div class="heading"><h3>የገደብ 11 ቀበሌዎች</h3></div>
  <div class="panel">
-  <p style="font-size:12px;color:var(--muted);line-height:1.7" data-am="የቀበሌዎች ዝርዝር ለማሳያ ብቻ በቁጥር ቀርቧል። ትክክለኛ የቀበሌ ስሞችን ከአስተዳደሩ አረጋግጠን እንሞላለን።" data-en="Kebele names are placeholders for now. Verified official names will be added after confirmation.">
-  የቀበሌዎች ዝርዝር ለማሳያ ብቻ በቁጥር ቀርቧል። ትክክለኛ የቀበሌ ስሞችን ከአስተዳደሩ አረጋግጠን እንሞላለን።</p>
   <div class="kebele-grid" id="kebeleList"></div>
  </div>
- <div class="panel">
-  <h3 data-am="የአካባቢ መረጃ" data-en="Local Information">የአካባቢ መረጃ</h3>
-  <p style="font-size:12px;color:var(--muted)" data-am="የትምህርት ቤቶች፣ ጤና ተቋማት፣ መንገዶችና ሌሎች ቦታዎች በቀጣይ ይጨመራሉ።" data-en="Schools, health facilities, roads and other locations will be added later.">የትምህርት ቤቶች፣ ጤና ተቋማት፣ መንገዶችና ሌሎች ቦታዎች በቀጣይ ይጨመራሉ።</p>
- </div>
+ <div class="notice">የቀበሌ ስሞቹ በተጠቃሚው በተሰጠው ዝርዝር መሠረት ተመዝግበዋል። የአስተዳደሩ ኦፊሴላዊ ማረጋገጫ በተጨማሪ ያስፈልጋል።</div>
 </section>
 
 <!-- COMPLAINT -->
 <section id="complaint" class="page">
- <div class="section-head"><h3 data-am="ጥያቄ / ቅሬታ ማቅረቢያ" data-en="Request / Complaint">ጥያቄ / ቅሬታ ማቅረቢያ</h3></div>
+ <div class="heading"><h3>ጥያቄና ቅሬታ ማቅረቢያ</h3></div>
  <div class="panel">
-  <p style="font-size:12px;color:var(--muted);line-height:1.7" data-am="ጥያቄዎን ወይም ችግርዎን ይጻፉ። ለማሳያ የመከታተያ ቁጥር ይሰጥዎታል።" data-en="Describe your request or issue. A demonstration tracking number will be generated.">ጥያቄዎን ወይም ችግርዎን ይጻፉ። ለማሳያ የመከታተያ ቁጥር ይሰጥዎታል።</p>
   <form id="complaintForm">
-   <div class="form-group">
-    <label data-am="ሙሉ ስም" data-en="Full Name">ሙሉ ስም</label>
-    <input id="personName" required placeholder="ስም / Name">
-   </div>
-   <div class="form-group">
-    <label data-am="ስልክ ቁጥር" data-en="Phone Number">ስልክ ቁጥር</label>
-    <input id="personPhone" type="tel" required placeholder="09XXXXXXXX">
-   </div>
-   <div class="form-group">
-    <label data-am="ቀበሌ" data-en="Kebele">ቀበሌ</label>
-    <select id="personKebele" required>
-     <option value="">ቀበሌ ይምረጡ / Select Kebele</option>
+   <div class="form-group"><label>ሙሉ ስም</label><input id="personName" required></div>
+   <div class="form-group"><label>ስልክ ቁጥር</label><input id="personPhone" type="tel" required placeholder="09XXXXXXXX"></div>
+   <div class="form-group"><label>ቀበሌ</label><select id="personKebele" required></select></div>
+   <div class="form-group"><label>የጥያቄው ዓይነት</label>
+    <select id="requestType">
+     <option>ቅሬታ</option><option>የአገልግሎት ጥያቄ</option>
+     <option>ሀሳብ</option><option>አስቸኳይ ሪፖርት</option>
     </select>
    </div>
-   <div class="form-group">
-    <label data-am="የጥያቄው ዓይነት" data-en="Request Type">የጥያቄው ዓይነት</label>
-    <select id="requestType" required>
-     <option value="complaint">ቅሬታ / Complaint</option>
-     <option value="service">የአገልግሎት ጥያቄ / Service</option>
-     <option value="suggestion">ሀሳብ / Suggestion</option>
-     <option value="emergency">አስቸኳይ ሪፖርት / Emergency Report</option>
-    </select>
-   </div>
-   <div class="form-group">
-    <label data-am="ዝርዝር መልዕክት" data-en="Message Details">ዝርዝር መልዕክት</label>
-    <textarea id="requestMessage" required placeholder="ጥያቄዎን እዚህ ይጻፉ..."></textarea>
-   </div>
-   <button class="full-btn" type="submit" data-am="ጥያቄውን አስገባ" data-en="Submit Request">ጥያቄውን አስገባ</button>
+   <div class="form-group"><label>ዝርዝር መልዕክት</label><textarea id="requestMessage" required></textarea></div>
+   <button class="full" type="submit">ጥያቄውን አስገባ</button>
   </form>
   <div id="submitResult"></div>
  </div>
@@ -372,144 +213,228 @@ button{cursor:pointer}
 
 <!-- TRACK -->
 <section id="track" class="page">
- <div class="section-head"><h3 data-am="ጥያቄዬን መከታተል" data-en="Track My Request">ጥያቄዬን መከታተል</h3></div>
+ <div class="heading"><h3>ጥያቄዬን መከታተል</h3></div>
  <div class="panel">
-  <p style="font-size:12px;color:var(--muted)" data-am="በቅሬታ ማቅረቢያ ጊዜ የተሰጠዎትን ቁጥር ያስገቡ።" data-en="Enter the tracking number you received when submitting your request.">በቅሬታ ማቅረቢያ ጊዜ የተሰጠዎትን ቁጥር ያስገቡ።</p>
-  <div class="form-group">
-   <label data-am="የመከታተያ ቁጥር" data-en="Tracking Number">የመከታተያ ቁጥር</label>
-   <input id="trackCode" placeholder="GED-XXXXXXXX">
-  </div>
-  <button class="full-btn" onclick="trackRequest()" data-am="ፈልግ" data-en="Search">ፈልግ</button>
+  <div class="form-group"><label>የመከታተያ ቁጥር</label><input id="trackCode" placeholder="GED-XXXXXXXX"></div>
+  <button class="full" onclick="trackRequest()">ፈልግ</button>
   <div id="trackResult"></div>
  </div>
 </section>
 
-<!-- MARKET -->
+<!-- JOBS -->
+<section id="jobs" class="page">
+ <div class="heading"><h3>የሥራ ማስታወቂያ ማዕከል</h3></div>
+ <div class="notice">የሥራ ዕድሎች ከተለያዩ ተቋማት ሲገኙ እዚህ ይታያሉ። ከመመልከትዎ በፊት የቀንና የቀጣሪ መረጃ ያረጋግጡ።</div>
+ <div class="panel" id="jobList"></div>
+</section>
+
+<!-- MAP -->
+<section id="map" class="page">
+ <div class="heading"><h3>GEDEB DIGITAL MAP</h3></div>
+ <div class="panel">
+  <p style="font-size:12px;line-height:1.8">የገደብ አካባቢን በውጫዊ ካርታ ለመፈለግ ከታች ይጠቀሙ። የቀበሌ ድንበሮችና የተቋማት ትክክለኛ መጋጠሚያ ገና አልተረጋገጡም።</p>
+  <a class="full" style="display:block;text-align:center;text-decoration:none" target="_blank" rel="noopener" href="https://www.openstreetmap.org/search?query=Gedeb%2C%20Ethiopia">የገደብ ካርታ ክፈት ↗</a>
+  <div class="form-group"><label>ቦታ ይፈልጉ</label><input id="mapSearch" placeholder="ለምሳሌ ወርቃ ሳካሮ"></div>
+  <button class="secondary" onclick="searchMap()">በካርታ ፈልግ</button>
+ </div>
+</section>
+
+<!-- AI -->
+<section id="ai" class="page">
+ <div class="heading"><h3>🤖 GEDEB AI ዲጂታል ረዳት</h3></div>
+ <div class="panel">
+  <div class="notice">ይህ የመጀመሪያ የማሳያ ረዳት ነው። እውነተኛ AI እንዲሆን ከደህንነቱ የተጠበቀ AI Backend ጋር ማገናኘት ያስፈልጋል።</div>
+  <div id="aiChat" class="result">ሰላም! እኔ GEDEB AI የማሳያ ረዳት ነኝ። ስለ ቀበሌ፣ ሥራ፣ ጥያቄ ወይም አገልግሎት ይጠይቁኝ።</div>
+  <div class="form-group"><label>ጥያቄዎ</label><input id="aiQuestion" placeholder="ጥያቄዎን ይጻፉ..."></div>
+  <button class="full" onclick="askAI()">ላክ</button>
+ </div>
+</section>
+
+<!-- COFFEE -->
 <section id="market" class="page">
- <div class="section-head"><h3 data-am="የቡናና የንግድ ገበያ" data-en="Coffee & Business Market">የቡናና የንግድ ገበያ</h3></div>
+ <div class="heading"><h3>☕ የቡናና የግብርና ገበያ</h3></div>
  <div class="panel">
-  <div style="font-size:35px">☕</div>
-  <h3 data-am="የገደብ ቡና ዲጂታል ገበያ" data-en="Gedeb Coffee Digital Market">የገደብ ቡና ዲጂታል ገበያ</h3>
-  <p style="font-size:12px;color:var(--muted);line-height:1.7" data-am="ገበሬዎችን፣ ሻጮችንና ገዢዎችን ለማገናኘት የተዘጋጀ የማሳያ ክፍል። የቡና ዋጋ እስካሁን አልተገናኘም።" data-en="A demonstration section designed to connect farmers, sellers and buyers. Live coffee prices are not connected yet.">ገበሬዎችን፣ ሻጮችንና ገዢዎችን ለማገናኘት የተዘጋጀ የማሳያ ክፍል። የቡና ዋጋ እስካሁን አልተገናኘም።</p>
-  <div class="notice" data-am="የገበያ ዋጋ እንደ እውነተኛ መረጃ እንዲታይ ከተረጋገጠ የገበያ ምንጭ ጋር ማገናኘት ያስፈልጋል።" data-en="Market prices must be connected to a verified data source before being displayed as real prices.">የገበያ ዋጋ እንደ እውነተኛ መረጃ እንዲታይ ከተረጋገጠ የገበያ ምንጭ ጋር ማገናኘት ያስፈልጋል።</div>
+  <h3>የገደብ ቡና ዲጂታል ገበያ</h3>
+  <p style="font-size:12px;line-height:1.8">ገበሬዎችን፣ ሻጮችን፣ ገዢዎችንና አቅራቢዎችን ለማገናኘት የተዘጋጀ ክፍል። የቀጥታ የቡና ዋጋ ገና አልተገናኘም።</p>
+  <div class="notice">የገበያ ዋጋ ከተረጋገጠ ምንጭ ጋር ከተገናኘ በኋላ ይታያል።</div>
  </div>
- <div class="panel">
-  <h3 data-am="የሥራ ዕድሎች" data-en="Job Opportunities">የሥራ ዕድሎች</h3>
-  <p style="font-size:12px;color:var(--muted)" data-am="የሥራ ማስታወቂያዎች ከተረጋገጡ በኋላ እዚህ ይታያሉ።" data-en="Verified job announcements will appear here.">የሥራ ማስታወቂያዎች ከተረጋገጡ በኋላ እዚህ ይታያሉ።</p>
- </div>
+ <div class="panel"><h3>የገበሬ መረጃ</h3><p>የምርት ማስታወቂያና የገበያ ግንኙነት።</p></div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects" class="page">
- <div class="section-head"><h3 data-am="የልማት ፕሮጀክቶች" data-en="Development Projects">የልማት ፕሮጀክቶች</h3></div>
+ <div class="heading"><h3>የልማት ፕሮጀክቶች</h3></div>
  <div class="panel">
-  <div style="font-size:35px">🏗️</div>
-  <h3 data-am="የገደብ ልማት ክትትል" data-en="Gedeb Development Tracker">የገደብ ልማት ክትትል</h3>
-  <p style="font-size:12px;color:var(--muted);line-height:1.7" data-am="የመንገድ፣ የውሃ፣ የመብራትና የሌሎች ፕሮጀክቶች ሁኔታ በተረጋገጠ መረጃ ሲገኝ እዚህ ይታያል።" data-en="Verified updates on roads, water, electricity and other projects will be shown here.">የመንገድ፣ የውሃ፣ የመብራትና የሌሎች ፕሮጀክቶች ሁኔታ በተረጋገጠ መረጃ ሲገኝ እዚህ ይታያል።</p>
-  <span class="status" data-am="መረጃ በመጠበቅ ላይ" data-en="Awaiting verified data">መረጃ በመጠበቅ ላይ</span>
+  <h3>የገደብ ልማት ክትትል</h3>
+  <p>የመንገድ፣ የውሃ፣ የመብራት፣ የጤናና የትምህርት ፕሮጀክቶች ሁኔታ በተረጋገጠ መረጃ ሲገኝ እዚህ ይታያል።</p>
  </div>
+</section>
+
+<!-- HEALTH -->
+<section id="health" class="page">
+ <div class="heading"><h3>የጤና አገልግሎት</h3></div>
+ <div class="panel"><p>የጤና ጣቢያዎች፣ ክሊኒኮች፣ የጤና ማስታወቂያና የአደጋ ጊዜ መረጃ የሚቀርብበት ክፍል።</p></div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="page">
+ <div class="heading"><h3>የትምህርት አገልግሎት</h3></div>
+ <div class="panel"><p>የትምህርት ቤቶች፣ የስኮላርሺፕ ዕድሎች፣ ስልጠናዎችና ማስታወቂያዎች።</p></div>
+</section>
+
+<!-- BUSINESS -->
+<section id="business" class="page">
+ <div class="heading"><h3>ንግድና ኢንቨስትመንት</h3></div>
+ <div class="panel"><p>የንግድ ተቋማት፣ የኢንቨስትመንት ዕድሎችና የአጋርነት መረጃ።</p></div>
+</section>
+
+<!-- TOURISM -->
+<section id="tourism" class="page">
+ <div class="heading"><h3>ቱሪዝምና ባህል</h3></div>
+ <div class="panel"><p>የጉብኝት ቦታዎች፣ የአካባቢ ባህልና የጎብኚ መረጃ።</p></div>
+</section>
+
+<!-- NEWS -->
+<section id="news" class="page">
+ <div class="heading"><h3>ዜናና ማስታወቂያ</h3></div>
+ <div class="panel" id="announcementList"></div>
 </section>
 
 <!-- MORE -->
 <section id="more" class="page">
- <div class="section-head"><h3 data-am="ተጨማሪ አገልግሎቶች" data-en="More">ተጨማሪ አገልግሎቶች</h3></div>
- <div class="panel">
-  <div class="item"><strong>🤖 GEDEB AI</strong><p data-am="የዲጂታል ረዳት ክፍል። በቀጣይ ከAI አገልግሎት ጋር ይገናኛል።" data-en="Digital assistant section. AI integration will be added later.">የዲጂታል ረዳት ክፍል። በቀጣይ ከAI አገልግሎት ጋር ይገናኛል።</p></div>
-  <div class="item"><strong>🗺️ Digital Map</strong><p data-am="የከተማው ካርታና የተቋማት ቦታ መረጃ በቀጣይ ይጨመራል።" data-en="City map and facility locations will be added later.">የከተማው ካርታና የተቋማት ቦታ መረጃ በቀጣይ ይጨመራል።</p></div>
-  <div class="item"><strong>🏥 Health</strong><p data-am="የጤና ተቋማትና የጤና መረጃ።" data-en="Health facilities and information.">የጤና ተቋማትና የጤና መረጃ።</p></div>
-  <div class="item"><strong>🎓 Education</strong><p data-am="የትምህርት ተቋማትና የትምህርት ዕድሎች።" data-en="Education facilities and opportunities.">የትምህርት ተቋማትና የትምህርት ዕድሎች።</p></div>
-  <div class="item"><strong>🌍 Tourism</strong><p data-am="የጉብኝት ቦታዎችና የአካባቢ ባህል።" data-en="Tourist destinations and local culture.">የጉብኝት ቦታዎችና የአካባቢ ባህል።</p></div>
-  <div class="item"><strong>📊 Transparency</strong><p data-am="የልማት ሥራዎችና የሕዝብ መረጃ ግልጽነት።" data-en="Development updates and public transparency.">የልማት ሥራዎችና የሕዝብ መረጃ ግልጽነት።</p></div>
+ <div class="heading"><h3>ተጨማሪ ክፍሎች</h3></div>
+ <div class="grid">
+  <button class="card" onclick="showPage('health')"><div class="ico">🏥</div><strong>ጤና</strong><small>የጤና መረጃ</small></button>
+  <button class="card" onclick="showPage('education')"><div class="ico">🎓</div><strong>ትምህርት</strong><small>የትምህርት መረጃ</small></button>
+  <button class="card" onclick="showPage('business')"><div class="ico">🏢</div><strong>ንግድና ኢንቨስትመንት</strong><small>የንግድ ዕድሎች</small></button>
+  <button class="card" onclick="showPage('tourism')"><div class="ico">🌍</div><strong>ቱሪዝም</strong><small>የጉብኝት መረጃ</small></button>
+  <button class="card" onclick="showPage('projects')"><div class="ico">🏗️</div><strong>ልማት</strong><small>የፕሮጀክት ክትትል</small></button>
+  <button class="card" onclick="showPage('news')"><div class="ico">📢</div><strong>ማስታወቂያ</strong><small>ዜናና መረጃ</small></button>
  </div>
- <div class="footer">
-  <strong>GEDEB ONE</strong><br>
-  SMART DIGITAL CITY ECOSYSTEM<br>
-  A Founder-Led Project Proposal<br>
-  © 2026 GEDEB ONE
- </div>
+ <div class="footer">GEDEB ONE<br>SMART DIGITAL CITY ECOSYSTEM<br>Founder-Led Project Proposal<br>© 2026</div>
 </section>
 
 </main>
 
 <nav class="bottom-nav">
- <button class="nav-btn active" data-page="home" onclick="showPage('home')"><span>⌂</span><label data-am="ዋና" data-en="Home">ዋና</label></button>
- <button class="nav-btn" data-page="services" onclick="showPage('services')"><span>▦</span><label data-am="አገልግሎት" data-en="Services">አገልግሎት</label></button>
- <button class="nav-btn" data-page="complaint" onclick="showPage('complaint')"><span>✎</span><label data-am="ቅሬታ" data-en="Request">ቅሬታ</label></button>
- <button class="nav-btn" data-page="track" onclick="showPage('track')"><span>⌕</span><label data-am="ክትትል" data-en="Track">ክትትል</label></button>
- <button class="nav-btn" data-page="more" onclick="showPage('more')"><span>•••</span><label data-am="ተጨማሪ" data-en="More">ተጨማሪ</label></button>
+ <button class="nav-btn active" data-page="home" onclick="showPage('home')"><span>⌂</span>ዋና</button>
+ <button class="nav-btn" data-page="services" onclick="showPage('services')"><span>▦</span>አገልግሎት</button>
+ <button class="nav-btn" data-page="complaint" onclick="showPage('complaint')"><span>✎</span>ቅሬታ</button>
+ <button class="nav-btn" data-page="track" onclick="showPage('track')"><span>⌕</span>ክትትል</button>
+ <button class="nav-btn" data-page="more" onclick="showPage('more')"><span>•••</span>ተጨማሪ</button>
 </nav>
 
-<!-- SERVICE MODAL -->
-<div class="modal" id="serviceModal" onclick="outsideClose(event,'serviceModal')">
- <div class="modal-box">
-  <div class="modal-head">
-   <h3 id="modalTitle">Service</h3>
-   <button class="close" onclick="closeModal('serviceModal')">×</button>
-  </div>
-  <div id="modalBody"></div>
- </div>
-</div>
-
-<!-- ADMIN MODAL -->
+<!-- ADMIN DASHBOARD -->
 <div class="modal" id="adminModal" onclick="outsideClose(event,'adminModal')">
  <div class="modal-box">
   <div class="modal-head">
-   <h3 data-am="የአስተዳዳር ማሳያ" data-en="Admin Demo Dashboard">የአስተዳዳር ማሳያ</h3>
+   <h3>⚙ የአስተዳደር Dashboard</h3>
    <button class="close" onclick="closeModal('adminModal')">×</button>
   </div>
-  <div class="notice" data-am="ይህ የማሳያ ዳሽቦርድ ነው። እውነተኛ የአስተዳዳሪ መግቢያ ከFirebase Authentication ጋር በቀጣይ ይገነባል።" data-en="This is a demonstration dashboard. Secure administrator login will be built with Firebase Authentication later.">
-  ይህ የማሳያ ዳሽቦርድ ነው። እውነተኛ የአስተዳዳሪ መግቢያ ከFirebase Authentication ጋር በቀጣይ ይገነባል።</div>
-  <div id="adminStats" style="margin-top:15px"></div>
-  <h3 data-am="የተቀበሉ ጥያቄዎች" data-en="Submitted Requests">የተቀበሉ ጥያቄዎች</h3>
-  <div id="adminRequests"></div>
+  <div class="notice">ይህ የማሳያ ዳሽቦርድ ነው። የሚታዩ መረጃዎች በዚህ መሣሪያ ላይ ብቻ ይቀመጣሉ። እውነተኛ የአስተዳዳሪ መግቢያ ከBackend ጋር ያስፈልጋል።</div>
+  <div class="admin-menu" style="margin-top:14px">
+   <button onclick="adminTab('overview')">📊 አጠቃላይ</button>
+   <button onclick="adminTab('requests')">📨 ጥያቄዎች</button>
+   <button onclick="adminTab('jobsAdmin')">💼 ሥራ መጨመር</button>
+   <button onclick="adminTab('newsAdmin')">📢 ማስታወቂያ</button>
+  </div>
+
+  <div id="overview" class="admin-section active">
+   <h3>አጠቃላይ ሪፖርት</h3>
+   <div id="adminStats"></div>
+  </div>
+
+  <div id="requests" class="admin-section">
+   <h3>የዜጎች ጥያቄዎች</h3>
+   <div id="adminRequests"></div>
+  </div>
+
+  <div id="jobsAdmin" class="admin-section">
+   <h3>የሥራ ማስታወቂያ ጨምር</h3>
+   <div class="form-group"><label>የሥራ ስም</label><input id="jobTitle"></div>
+   <div class="form-group"><label>ቀጣሪ / ድርጅት</label><input id="jobEmployer"></div>
+   <div class="form-group"><label>ቦታ</label><input id="jobLocation"></div>
+   <div class="form-group"><label>ዝርዝር መረጃ</label><textarea id="jobDescription"></textarea></div>
+   <button class="full" onclick="addJob()">ማስታወቂያውን አስቀምጥ</button>
+   <div id="adminJobList"></div>
+  </div>
+
+  <div id="newsAdmin" class="admin-section">
+   <h3>ዜና / ማስታወቂያ ጨምር</h3>
+   <div class="form-group"><label>ርዕስ</label><input id="newsTitle"></div>
+   <div class="form-group"><label>ዝርዝር</label><textarea id="newsDescription"></textarea></div>
+   <button class="full" onclick="addNews()">ማስታወቂያ አስቀምጥ</button>
+   <div id="adminNewsList"></div>
+  </div>
  </div>
 </div>
 
 <script>
-let language = localStorage.getItem("gedebLanguage") || "am";
-
-const services = [
- {icon:"🏛️",am:"የመንግሥት አገልግሎት",en:"Government Services",descAm:"የአስተዳደር ጥያቄዎችና ማመልከቻዎች",descEn:"Government requests and applications"},
- {icon:"🗺️",am:"ዲጂታል ካርታ",en:"Digital City Map",descAm:"የከተማና ቀበሌ መረጃ",descEn:"City and kebele information"},
- {icon:"🌾",am:"የገበሬ አገልግሎት",en:"Farmer Services",descAm:"የግብርናና የገበሬ መረጃ",descEn:"Agriculture and farmer information"},
- {icon:"☕",am:"የቡና ገበያ",en:"Coffee Market",descAm:"ገበሬና ገዢ ማገናኛ",descEn:"Connect farmers and buyers"},
- {icon:"🚨",am:"የአደጋ ጊዜ",en:"Emergency Services",descAm:"የአደጋ ማሳወቂያ",descEn:"Emergency reporting"},
- {icon:"💼",am:"ሥራና ንግድ",en:"Jobs and Business",descAm:"የሥራና የንግድ ዕድሎች",descEn:"Job and business opportunities"},
- {icon:"🏗️",am:"የልማት ፕሮጀክቶች",en:"Development Projects",descAm:"የልማት ሥራ ክትትል",descEn:"Development project tracking"},
- {icon:"🏥",am:"የጤና አገልግሎት",en:"Health Services",descAm:"የጤና ተቋማትና መረጃ",descEn:"Health facilities and information"},
- {icon:"🎓",am:"የትምህርት አገልግሎት",en:"Education Services",descAm:"የትምህርት ቤቶች መረጃ",descEn:"School information"},
- {icon:"🌍",am:"ቱሪዝም",en:"Tourism",descAm:"የጉብኝትና ባህል መረጃ",descEn:"Tourism and culture"},
- {icon:"🤖",am:"GEDEB AI ረዳት",en:"GEDEB AI Assistant",descAm:"የዲጂታል መረጃ ረዳት",descEn:"Digital information assistant"},
- {icon:"📊",am:"ግልጽነትና ተጠያቂነት",en:"Transparency",descAm:"የሕዝብ መረጃና የሥራ ውጤት",descEn:"Public information and performance"}
+const kebeles=[
+"ገደብ ባሬዳ",
+"ገደብ ሴሶሌ",
+"ባደሳ",
+"ጋልቻ",
+"ባንቆ ጣጣቱ",
+"ሐሎ ባርት",
+"ወርቃ ሳካሮ",
+"ወርቃ ጨልበሳ",
+"ባንቆ ጨልጨለ",
+"ባንቆ ጎቲቲ",
+"ገደብ ጉበታ"
 ];
 
-const kebeles = Array.from({length:11},(_,i)=>i+1);
+let language=localStorage.getItem("gedebLanguage")||"am";
+
+const services=[
+["🏛️","የመንግሥት አገልግሎት","Government Services","የአስተዳደር ጥያቄዎችና ማመልከቻዎች","Government requests and applications","complaint"],
+["🗺️","ዲጂታል ካርታ","Digital Map","የከተማና የቀበሌ መረጃ","City and kebele information","map"],
+["🌾","የገበሬ አገልግሎት","Farmer Services","የግብርና መረጃ","Agriculture information","market"],
+["☕","የቡና ገበያ","Coffee Market","ገበሬና ገዢ ማገናኛ","Connect farmers and buyers","market"],
+["🚨","የአደጋ ጊዜ","Emergency Services","የአደጋ ሪፖርት","Emergency reporting","complaint"],
+["💼","ሥራና ንግድ","Jobs and Business","የሥራና የንግድ ዕድሎች","Jobs and business opportunities","jobs"],
+["🏗️","የልማት ፕሮጀክቶች","Development Projects","የልማት ሥራ ክትትል","Development tracking","projects"],
+["🏥","የጤና አገልግሎት","Health Services","የጤና ተቋማትና መረጃ","Health facilities and information","health"],
+["🎓","የትምህርት አገልግሎት","Education Services","የትምህርት ቤቶች መረጃ","School information","education"],
+["🌍","ቱሪዝም","Tourism","የጉብኝትና ባህል መረጃ","Tourism and culture","tourism"],
+["🤖","GEDEB AI ረዳት","GEDEB AI Assistant","የዲጂታል መረጃ ረዳት","Digital information assistant","ai"],
+["📊","ግልጽነትና ተጠያቂነት","Transparency","የሕዝብ መረጃና የሥራ ውጤት","Public information","news"],
+["📢","ዜናና ማስታወቂያ","News and Notices","የአካባቢ ማስታወቂያ","Local announcements","news"],
+["🏢","ኢንቨስትመንት","Investment","የኢንቨስትመንት ዕድሎች","Investment opportunities","business"],
+["📝","የሰነድ አገልግሎት","Document Services","ቅጾችና ማመልከቻዎች","Forms and applications","complaint"],
+["👥","የሕዝብ ተሳትፎ","Citizen Participation","የሕዝብ ሀሳብና ጥያቄ","Citizen feedback","complaint"],
+["📍","የቀበሌ መረጃ","Kebele Information","የአካባቢ መረጃ","Local information","kebeles"],
+["🔔","የድንገተኛ ማሳወቂያ","Emergency Notices","አስቸኳይ መረጃ","Emergency notices","news"]
+];
 
 function t(am,en){return language==="am"?am:en}
+function getData(key){try{return JSON.parse(localStorage.getItem(key)||"[]")}catch(e){return []}}
+function saveData(key,data){localStorage.setItem(key,JSON.stringify(data))}
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
 
 function renderServices(){
- const card = s => `
- <button class="service" onclick="openService(${services.indexOf(s)})">
-  <div class="service-icon">${s.icon}</div>
-  <strong>${t(s.am,s.en)}</strong>
-  <small>${t(s.descAm,s.descEn)}</small>
- </button>`;
- document.getElementById("homeServices").innerHTML=services.slice(0,4).map(card).join("");
- document.getElementById("allServices").innerHTML=services.map(card).join("");
+ const make=(s)=>`<button class="card" onclick="showPage('${s[5]}')">
+ <div class="ico">${s[0]}</div><strong>${t(s[1],s[2])}</strong>
+ <small>${t(s[3],s[4])}</small></button>`;
+ document.getElementById("homeServices").innerHTML=services.slice(0,4).map(make).join("");
+ document.getElementById("allServices").innerHTML=services.map(make).join("");
 }
 
 function renderKebeles(){
- document.getElementById("kebeleList").innerHTML=kebeles.map(n=>
- `<div class="kebele">${t("ቀበሌ","Kebele")} ${n}</div>`).join("");
+ document.getElementById("kebeleList").innerHTML=kebeles.map((k,i)=>
+ `<div class="kebele">${i+1}. ${esc(k)}</div>`).join("");
  document.getElementById("personKebele").innerHTML=
- `<option value="">${t("ቀበሌ ይምረጡ","Select Kebele")}</option>`+
- kebeles.map(n=>`<option value="${n}">${t("ቀበሌ","Kebele")} ${n}</option>`).join("");
+ `<option value="">ቀበሌ ይምረጡ</option>`+
+ kebeles.map(k=>`<option value="${esc(k)}">${esc(k)}</option>`).join("");
 }
 
 function showPage(id){
+ const page=document.getElementById(id);
+ if(!page)return;
  document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
- document.getElementById(id).classList.add("active");
- document.querySelectorAll(".nav-btn").forEach(b=>b.classList.toggle("active",b.dataset.page===id));
+ page.classList.add("active");
+ document.querySelectorAll(".nav-btn").forEach(b=>
+ b.classList.toggle("active",b.dataset.page===id));
  window.scrollTo({top:0,behavior:"smooth"});
 }
 
@@ -518,112 +443,177 @@ function toggleLanguage(){
  localStorage.setItem("gedebLanguage",language);
  document.documentElement.lang=language;
  document.querySelectorAll("[data-am]").forEach(el=>{
-  el.textContent=el.getAttribute(language==="am"?"data-am":"data-en");
+ el.textContent=el.getAttribute(language==="am"?"data-am":"data-en");
  });
  document.getElementById("langBtn").textContent=language==="am"?"EN":"አማ";
  renderServices();
- renderKebeles();
 }
 
-function openService(index){
- const s=services[index];
- document.getElementById("modalTitle").textContent=t(s.am,s.en);
- document.getElementById("modalBody").innerHTML=`
- <div style="font-size:42px;margin:20px 0">${s.icon}</div>
- <p style="font-size:13px;line-height:1.8;color:#71817d">${t(s.descAm,s.descEn)}</p>
- <div class="notice">${t("ይህ ክፍል በመጀመሪያ የማሳያ ስሪት ላይ ነው። እውነተኛ አገልግሎቱ ከተገቢው ቢሮ ጋር ከተገናኘ በኋላ ይሠራል።","This section is currently a demonstration. Live service will require integration with the relevant office.")}</div>
- <button class="full-btn" onclick="closeModal('serviceModal');showPage('complaint')">${t("ጥያቄ ያቅርቡ","Submit a Request")}</button>`;
- document.getElementById("serviceModal").classList.add("show");
-}
-
-function openAdmin(){
- const requests=getRequests();
- document.getElementById("adminStats").innerHTML=`
- <div class="admin-card">
-  <small>${t("በዚህ መሣሪያ ላይ የተቀመጡ ጥያቄዎች","Requests saved on this device")}</small>
-  <strong>${requests.length}</strong>
- </div>`;
- document.getElementById("adminRequests").innerHTML=requests.length?
- requests.slice().reverse().map(r=>`
- <div class="item">
- <strong>${escapeHtml(r.name)} — ${escapeHtml(r.code)}</strong>
- <p>${escapeHtml(r.type)} | ${escapeHtml(r.kebele)}<br>${escapeHtml(r.message)}</p>
- <span class="status">${escapeHtml(r.status)}</span>
- </div>`).join(""):`<p style="font-size:12px;color:#71817d">${t("እስካሁን ጥያቄ አልተመዘገበም።","No requests have been submitted yet.")}</p>`;
- document.getElementById("adminModal").classList.add("show");
-}
-
-function closeModal(id){document.getElementById(id).classList.remove("show")}
-function outsideClose(e,id){if(e.target.id===id)closeModal(id)}
-
-function getRequests(){
- try{return JSON.parse(localStorage.getItem("gedebRequests")||"[]")}
- catch(e){return []}
-}
-
-function saveRequests(list){
- localStorage.setItem("gedebRequests",JSON.stringify(list));
-}
-
-function escapeHtml(value){
- return String(value).replace(/[&<>"']/g,c=>({
- "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
- }[c]));
-}
+function getRequests(){return getData("gedebRequests")}
 
 document.getElementById("complaintForm").addEventListener("submit",function(e){
  e.preventDefault();
- const code="GED-"+Math.random().toString(36).substring(2,10).toUpperCase();
- const request={
-  code,
-  name:document.getElementById("personName").value.trim(),
-  phone:document.getElementById("personPhone").value.trim(),
-  kebele:document.getElementById("personKebele").value,
-  type:document.getElementById("requestType").value,
-  message:document.getElementById("requestMessage").value.trim(),
-  status:"Received / ተቀባ",
-  date:new Date().toISOString()
+ const code="GED-"+Math.random().toString(36).slice(2,10).toUpperCase();
+ const r={
+ code,
+ name:document.getElementById("personName").value.trim(),
+ phone:document.getElementById("personPhone").value.trim(),
+ kebele:document.getElementById("personKebele").value,
+ type:document.getElementById("requestType").value,
+ message:document.getElementById("requestMessage").value.trim(),
+ status:"ተቀባ / Received",
+ date:new Date().toISOString()
  };
- const requests=getRequests();
- requests.push(request);
- saveRequests(requests);
- document.getElementById("submitResult").innerHTML=`
- <div class="result">
- <strong>${t("ጥያቄዎ ተመዝግቧል!","Your request has been recorded!")}</strong><br>
- ${t("የመከታተያ ቁጥርዎ፦","Your tracking number:")}<br>
- <strong style="font-size:20px">${code}</strong><br>
- ${t("ይህንን ቁጥር ያስቀምጡ።","Keep this number safe.")}
- <button class="secondary-btn" style="display:block;margin-top:10px" onclick="copyCode('${code}')">${t("ቁጥሩን ኮፒ አድርግ","Copy Number")}</button>
- </div>`;
+ const list=getRequests();list.push(r);saveData("gedebRequests",list);
+ document.getElementById("submitResult").innerHTML=
+ `<div class="result"><strong>ጥያቄዎ ተመዝግቧል!</strong><br>
+ የመከታተያ ቁጥርዎ፦<br><strong style="font-size:21px">${code}</strong>
+ <br>ይህንን ቁጥር ያስቀምጡ።
+ <button class="secondary" onclick="copyCode('${code}')">ቁጥሩን ኮፒ አድርግ</button></div>`;
  this.reset();
 });
 
 function copyCode(code){
- if(navigator.clipboard){
-  navigator.clipboard.writeText(code).then(()=>alert(t("ተኮፒ ተደርጓል","Copied")));
- }else{alert(code)}
+ if(navigator.clipboard&&navigator.clipboard.writeText){
+ navigator.clipboard.writeText(code).then(()=>alert("ተኮፒ ተደርጓልፐ"));
+ }else{prompt("የመከታተያ ቁጥር",code)}
 }
 
 function trackRequest(){
  const code=document.getElementById("trackCode").value.trim().toUpperCase();
  const found=getRequests().find(r=>r.code.toUpperCase()===code);
  const out=document.getElementById("trackResult");
- if(!found){
-  out.innerHTML=`<div class="result">${t("ይህ ቁጥር አልተገኘም። በትክክል እንዳስገቡ ያረጋግጡ።","Number not found. Please check and try again.")}</div>`;
-  return;
- }
- out.innerHTML=`<div class="result">
- <strong>${t("ጥያቄው ተገኝቷል","Request Found")}</strong><br>
- ${t("መከታተያ ቁጥር","Tracking Number")}: ${escapeHtml(found.code)}<br>
- ${t("ሁኔታ","Status")}: ${escapeHtml(found.status)}<br>
- ${t("የገባበት ቀን","Submitted")}: ${new Date(found.date).toLocaleDateString()}
- <p>${t("ማሳሰቢያ፦ ይህ በስልኩ ላይ የተቀመጠ የማሳያ መረጃ ነው።","Note: This is demonstration data saved on this device.")}</p>
+ if(!found){out.innerHTML='<div class="result">ይህ ቁጥር አልተገኘም።</div>';return}
+ out.innerHTML=`<div class="result"><strong>ጥያቄው ተገኝቷል</strong><br>
+ ቁጥር፦ ${esc(found.code)}<br>
+ ቀበሌ፦ ${esc(found.kebele)}<br>
+ ሁኔታ፦ ${esc(found.status)}<br>
+ ቀን፦ ${new Date(found.date).toLocaleDateString()}</div>`;
+}
+
+function openAdmin(){
+ document.getElementById("adminModal").classList.add("show");
+ adminTab("overview");
+ renderAdmin();
+}
+function closeModal(id){document.getElementById(id).classList.remove("show")}
+function outsideClose(e,id){if(e.target.id===id)closeModal(id)}
+
+function adminTab(id){
+ document.querySelectorAll(".admin-section").forEach(x=>x.classList.remove("active"));
+ document.getElementById(id).classList.add("active");
+ renderAdmin();
+}
+
+function renderAdmin(){
+ const requests=getRequests(),jobs=getData("gedebJobs"),news=getData("gedebNews");
+ document.getElementById("adminStats").innerHTML=`
+ <div class="stats">
+ <div class="stat"><strong>${requests.length}</strong><span>ጥያቄዎች</span></div>
+ <div class="stat"><strong>${jobs.length}</strong><span>የሥራ ማስታወቂያዎች</span></div>
+ <div class="stat"><strong>${news.length}</strong><span>ማስታወቂያዎች</span></div>
  </div>`;
+ document.getElementById("adminRequests").innerHTML=requests.length?
+ requests.slice().reverse().map((r,i)=>`
+ <div class="item">
+ <strong>${esc(r.name)} — ${esc(r.code)}</strong>
+ <p>${esc(r.type)} | ${esc(r.kebele)}<br>${esc(r.message)}<br>ስልክ፦ ${esc(r.phone)}</p>
+ <span class="tag">${esc(r.status)}</span>
+ <div class="form-group"><label>የጥያቄ ሁኔታ ቀይር</label>
+ <select onchange="updateRequest('${r.code}',this.value)">
+ <option ${r.status.includes("ተቀባ")?"selected":""}>ተቀባ / Received</option>
+ <option ${r.status.includes("በሂደት")?"selected":""}>በሂደት ላይ / Processing</option>
+ <option ${r.status.includes("ተጠናቋል")?"selected":""}>ተጠናቋል / Completed</option>
+ </select></div>
+ </div>`).join(""):"<p>ጥያቄ የለም።</p>";
+ document.getElementById("adminJobList").innerHTML=jobs.map((j,i)=>
+ `<div class="item"><strong>${esc(j.title)}</strong><p>${esc(j.employer)} | ${esc(j.location)}</p>
+ <button class="danger" onclick="deleteJob(${i})">ሰርዝ</button></div>`).join("");
+ document.getElementById("adminNewsList").innerHTML=news.map((n,i)=>
+ `<div class="item"><strong>${esc(n.title)}</strong><p>${esc(n.description)}</p>
+ <button class="danger" onclick="deleteNews(${i})">ሰርዝ</button></div>`).join("");
+}
+
+function updateRequest(code,status){
+ const list=getRequests(),r=list.find(x=>x.code===code);
+ if(r){r.status=status;saveData("gedebRequests",list);renderAdmin()}
+}
+function addJob(){
+ const title=document.getElementById("jobTitle").value.trim();
+ const employer=document.getElementById("jobEmployer").value.trim();
+ const location=document.getElementById("jobLocation").value.trim();
+ const description=document.getElementById("jobDescription").value.trim();
+ if(!title||!employer||!description){alert("እባክዎ አስፈላጊ መረጃዎችን ይሙሉ።");return}
+ const list=getData("gedebJobs");
+ list.push({title,employer,location,description,date:new Date().toLocaleDateString()});
+ saveData("gedebJobs",list);
+ ["jobTitle","jobEmployer","jobLocation","jobDescription"].forEach(id=>document.getElementById(id).value="");
+ renderAdmin();renderJobs();
+ alert("የሥራ ማስታወቂያው ተቀምጧል።");
+}
+function deleteJob(i){
+ if(!confirm("ይህንን ማስታወቂያ ሰርዝ?"))return;
+ const a=getData("gedebJobs");a.splice(i,1);saveData("gedebJobs",a);renderAdmin();renderJobs();
+}
+function renderJobs(){
+ const jobs=getData("gedebJobs");
+ document.getElementById("jobList").innerHTML=jobs.length?
+ jobs.slice().reverse().map(j=>`
+ <div class="item"><strong>${esc(j.title)}</strong>
+ <p>ቀጣሪ፦ ${esc(j.employer)}<br>ቦታ፦ ${esc(j.location)}<br>${esc(j.description)}</p>
+ <span class="tag">${esc(j.date)}</span></div>`).join(""):"<p>እስካሁን የተጨመረ የሥራ ማስታወቂያ የለም።</p>";
+}
+function addNews(){
+ const title=document.getElementById("newsTitle").value.trim();
+ const description=document.getElementById("newsDescription").value.trim();
+ if(!title||!description){alert("ርዕስና ዝርዝር መረጃ ያስገቡ።");return}
+ const a=getData("gedebNews");
+ a.push({title,description,date:new Date().toLocaleDateString()});
+ saveData("gedebNews",a);
+ document.getElementById("newsTitle").value="";
+ document.getElementById("newsDescription").value="";
+ renderAdmin();renderNews();alert("ማስታወቂያው ተቀምጧል።");
+}
+function deleteNews(i){
+ if(!confirm("ማስታወቂያውን ሰርዝ?"))return;
+ const a=getData("gedebNews");a.splice(i,1);saveData("gedebNews",a);renderAdmin();renderNews();
+}
+function renderNews(){
+ const a=getData("gedebNews");
+ const html=a.length?a.slice().reverse().map(n=>
+ `<div class="item"><strong>${esc(n.title)}</strong><p>${esc(n.description)}</p><span class="tag">${esc(n.date)}</span></div>`).join(""):"<p>ማስታወቂያ የለም።</p>";
+ document.getElementById("announcementList").innerHTML=html;
+ document.getElementById("homeAnnouncements").innerHTML=html;
+}
+
+function searchMap(){
+ const q=document.getElementById("mapSearch").value.trim();
+ if(!q){alert("የሚፈልጉትን ቦታ ያስገቡ።");return}
+ window.open("https://www.openstreetmap.org/search?query="+encodeURIComponent(q+" Gedeb Ethiopia"),"_blank");
+}
+
+function askAI(){
+ const q=document.getElementById("aiQuestion").value.trim();
+ if(!q)return;
+ const x=q.toLowerCase();
+ let a="ይህንን ጥያቄ በትክክል ለመመለስ ከተረጋገጠ የወረዳ መረጃና ከእውነተኛ AI ጋር መገናኘት ያስፈልጋል። ለአሁኑ በጥያቄ ማቅረቢያ ገጽ መልዕክት ያስገቡ።";
+ if(x.includes("ቀበሌ")||x.includes("kebele")){
+ a="GEDEB ONE 11 ቀበሌዎችን ይዟል። በቀበሌዎች ገጽ ዝርዝራቸውን ይመልከቱ።";}
+ else if(x.includes("ሥራ")||x.includes("ስራ")||x.includes("job")){
+ a="የሥራ ማስታወቂያዎችን በየሥራ ማዕከል ገጽ ይመልከቱ።";}
+ else if(x.includes("ቅሬታ")||x.includes("ጥያቄ")){
+ a="ቅሬታ ወይም ጥያቄ ለማቅረብ የቅሬታ ገጹን ይጠቀሙ። የመከታተያ ቁጥር ይሰጥዎታል።";}
+ else if(x.includes("ካርታ")||x.includes("map")){
+ a="የገደብ ካርታን ለመፈለግ Digital Map ገጹን ይጠቀሙ።";}
+ document.getElementById("aiChat").innerHTML=
+ "<strong>እርስዎ፦</strong> "+esc(q)+"<hr><strong>GEDEB AI፦</strong> "+esc(a);
+ document.getElementById("aiQuestion").value="";
 }
 
 renderServices();
 renderKebeles();
-if(language==="en")toggleLanguage();
+renderJobs();
+renderNews();
 </script>
 
 </body>
