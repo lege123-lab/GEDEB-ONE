@@ -802,12 +802,12 @@ document.getElementById("adminPassword").value
 );
 
 /*
-ADMIN DOCUMENT PATH:
-admin/{UID}/admins/{UID}
+CORRECT ADMIN DOCUMENT PATH:
+admins/{UID}
 */
 
 const snap=await fb.getDoc(
-fb.doc(fb.db,"admin",cred.user.uid,"admins",cred.user.uid)
+fb.doc(fb.db,"admins",cred.user.uid)
 );
 
 if(!snap.exists()||snap.data().role!=="admin"||snap.data().active!==true){
@@ -931,12 +931,12 @@ return;
 try{
 
 /*
-ADMIN DOCUMENT PATH:
-admin/{UID}/admins/{UID}
+CORRECT ADMIN DOCUMENT PATH:
+admins/{UID}
 */
 
 const a=await getDoc(
-doc(db,"admin",user.uid,"admins",user.uid)
+doc(db,"admins",user.uid)
 );
 
 if(
