@@ -9,76 +9,336 @@
 <title>GEDEB ONE | Smart Digital City Ecosystem</title>
 <style>
 :root{--g:#075e54;--g2:#0b806e;--gold:#e9b949;--bg:#f3f7f5;--white:#fff;--ink:#18342f;--muted:#71817c;--border:#e3ece8;--mint:#e6f5ef;--shadow:0 6px 22px #163d3210}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,"Noto Sans Ethiopic",sans-serif}
-button,input,textarea,select{font:inherit}button{cursor:pointer}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,"Noto Sans Ethiopic",sans-serif}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
 .topbar{position:sticky;top:0;z-index:20;background:var(--g);color:white;padding:12px 15px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 3px 12px #0002}
-.brand{display:flex;align-items:center;gap:10px}.logo{width:43px;height:43px;border-radius:13px;background:white;color:var(--g);display:grid;place-items:center;font-weight:900;font-size:19px}.brand h1{font-size:18px;margin:0}.brand small{font-size:9px;color:#c9e8dd}
-.top-actions{display:flex;gap:7px}.top-btn{background:#ffffff18;color:white;border:1px solid #ffffff55;border-radius:10px;padding:9px 11px;font-size:12px}
-.container{max-width:950px;margin:auto;padding:0 14px 100px}.hero{margin:15px 0;padding:25px 20px;border-radius:22px;background:linear-gradient(130deg,#064b43,#087e70,#16a085);color:white;box-shadow:var(--shadow)}
-.hero-tag{font-size:11px;border:1px solid #ffffff66;border-radius:20px;padding:6px 10px;display:inline-block}.hero h2{font-size:26px;line-height:1.4;margin:18px 0 8px}.hero p{font-size:13px;line-height:1.8;color:#d9eee8}
-.hero-buttons{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}.primary,.light,.secondary,.danger{border:0;border-radius:11px;padding:12px 15px;font-weight:bold}.primary{background:var(--gold);color:#332708}.light{background:#ffffff20;color:white;border:1px solid #ffffff55}.secondary{background:white;color:var(--g);border:1px solid var(--g)}.danger{background:#fff0f0;color:#b52b2b;border:1px solid #f2cccc}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:15px 0}.stat,.card,.panel{background:white;border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow)}.stat{text-align:center;padding:13px 5px}.stat strong{display:block;color:var(--g);font-size:21px}.stat span{font-size:10px;color:var(--muted)}
-.heading{display:flex;justify-content:space-between;align-items:center;margin:23px 0 12px}.heading h3{font-size:17px;margin:0}.heading small{color:var(--muted);font-size:11px}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.card{padding:14px;color:var(--ink);text-align:left;min-height:120px}.card .ico{font-size:24px;background:var(--mint);width:44px;height:44px;border-radius:13px;display:grid;place-items:center;margin-bottom:9px}.card strong{display:block;font-size:13px;margin-bottom:5px}.card small{font-size:10px;color:var(--muted);line-height:1.6}
-.panel{padding:16px;margin:12px 0}.page{display:none}.page.active{display:block}.kebele-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.kebele{background:var(--mint);color:var(--g);padding:12px;border-radius:10px;font-size:12px;font-weight:bold}
-.form-group{margin:13px 0}.form-group label{display:block;font-size:12px;font-weight:bold;margin-bottom:7px}.form-group input,.form-group textarea,.form-group select{width:100%;padding:13px;border:1px solid var(--border);border-radius:10px;background:#fbfdfc;color:var(--ink)}.form-group textarea{min-height:95px;resize:vertical}
-.full{width:100%;padding:14px;background:var(--g);color:white;border:0;border-radius:11px;font-weight:bold}.result{padding:13px;background:var(--mint);border-radius:11px;font-size:12px;line-height:1.8;margin-top:12px;overflow-wrap:anywhere}.notice{background:#fff8e6;border-left:4px solid var(--gold);padding:12px;border-radius:9px;font-size:12px;line-height:1.8}
-.item{padding:13px 0;border-bottom:1px solid var(--border)}.item:last-child{border:0}.item strong{font-size:13px}.item p{font-size:11px;color:var(--muted);line-height:1.7}.tag{display:inline-block;padding:5px 9px;background:#fff1d5;color:#855d08;border-radius:20px;font-size:10px}
+.brand{display:flex;align-items:center;gap:10px}
+.logo{width:43px;height:43px;border-radius:13px;background:white;color:var(--g);display:grid;place-items:center;font-weight:900;font-size:19px}
+.brand h1{font-size:18px;margin:0}
+.brand small{font-size:9px;color:#c9e8dd}
+.top-actions{display:flex;gap:7px}
+.top-btn{background:#ffffff18;color:white;border:1px solid #ffffff55;border-radius:10px;padding:9px 11px;font-size:12px}
+.container{max-width:950px;margin:auto;padding:0 14px 100px}
+.hero{margin:15px 0;padding:25px 20px;border-radius:22px;background:linear-gradient(130deg,#064b43,#087e70,#16a085);color:white;box-shadow:var(--shadow)}
+.hero-tag{font-size:11px;border:1px solid #ffffff66;border-radius:20px;padding:6px 10px;display:inline-block}
+.hero h2{font-size:26px;line-height:1.4;margin:18px 0 8px}
+.hero p{font-size:13px;line-height:1.8;color:#d9eee8}
+.hero-buttons{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}
+.primary,.light,.secondary,.danger{border:0;border-radius:11px;padding:12px 15px;font-weight:bold}
+.primary{background:var(--gold);color:#332708}
+.light{background:#ffffff20;color:white;border:1px solid #ffffff55}
+.secondary{background:white;color:var(--g);border:1px solid var(--g)}
+.danger{background:#fff0f0;color:#b52b2b;border:1px solid #f2cccc}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:15px 0}
+.stat,.card,.panel{background:white;border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow)}
+.stat{text-align:center;padding:13px 5px}
+.stat strong{display:block;color:var(--g);font-size:21px}
+.stat span{font-size:10px;color:var(--muted)}
+.heading{display:flex;justify-content:space-between;align-items:center;margin:23px 0 12px}
+.heading h3{font-size:17px;margin:0}
+.heading small{color:var(--muted);font-size:11px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.card{padding:14px;color:var(--ink);text-align:left;min-height:120px}
+.card .ico{font-size:24px;background:var(--mint);width:44px;height:44px;border-radius:13px;display:grid;place-items:center;margin-bottom:9px}
+.card strong{display:block;font-size:13px;margin-bottom:5px}
+.card small{font-size:10px;color:var(--muted);line-height:1.6}
+.panel{padding:16px;margin:12px 0}
+.page{display:none}
+.page.active{display:block}
+.kebele-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.kebele{background:var(--mint);color:var(--g);padding:12px;border-radius:10px;font-size:12px;font-weight:bold}
+.form-group{margin:13px 0}
+.form-group label{display:block;font-size:12px;font-weight:bold;margin-bottom:7px}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:13px;border:1px solid var(--border);border-radius:10px;background:#fbfdfc;color:var(--ink)}
+.form-group textarea{min-height:95px;resize:vertical}
+.full{width:100%;padding:14px;background:var(--g);color:white;border:0;border-radius:11px;font-weight:bold}
+.result{padding:13px;background:var(--mint);border-radius:11px;font-size:12px;line-height:1.8;margin-top:12px;overflow-wrap:anywhere}
+.notice{background:#fff8e6;border-left:4px solid var(--gold);padding:12px;border-radius:9px;font-size:12px;line-height:1.8}
+.item{padding:13px 0;border-bottom:1px solid var(--border)}
+.item:last-child{border:0}
+.item strong{font-size:13px}
+.item p{font-size:11px;color:var(--muted);line-height:1.7}
+.tag{display:inline-block;padding:5px 9px;background:#fff1d5;color:#855d08;border-radius:20px;font-size:10px}
 .bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:white;border-top:1px solid var(--border);display:flex;justify-content:space-around;padding:8px 2px calc(8px + env(safe-area-inset-bottom))}
-.nav-btn{border:0;background:none;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:4px;font-size:10px;min-width:50px}.nav-btn span{font-size:20px}.nav-btn.active{color:var(--g);font-weight:bold}
-.modal{display:none;position:fixed;inset:0;background:#102b27aa;z-index:50;align-items:flex-end;justify-content:center}.modal.show{display:flex}.modal-box{width:100%;max-width:650px;max-height:90vh;overflow:auto;background:white;border-radius:22px 22px 0 0;padding:19px}
-.modal-head{display:flex;align-items:center;justify-content:space-between}.modal-head h3{font-size:17px}.close{border:0;border-radius:50%;width:35px;height:35px;background:#edf3f1}.admin-menu{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.admin-menu button{padding:12px;border:1px solid var(--border);background:#f7fbf9;border-radius:10px;color:var(--g);font-weight:bold}
-.admin-section{display:none}.admin-section.active{display:block}.footer{text-align:center;color:var(--muted);font-size:10px;padding:25px;line-height:1.8}.hidden{display:none!important}
-@media(min-width:650px){.grid{grid-template-columns:repeat(3,1fr)}.kebele-grid{grid-template-columns:repeat(3,1fr)}.hero{padding:35px}.hero h2{font-size:32px}}
+.nav-btn{border:0;background:none;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:4px;font-size:10px;min-width:50px}
+.nav-btn span{font-size:20px}
+.nav-btn.active{color:var(--g);font-weight:bold}
+.modal{display:none;position:fixed;inset:0;background:#102b27aa;z-index:50;align-items:flex-end;justify-content:center}
+.modal.show{display:flex}
+.modal-box{width:100%;max-width:650px;max-height:90vh;overflow:auto;background:white;border-radius:22px 22px 0 0;padding:19px}
+.modal-head{display:flex;align-items:center;justify-content:space-between}
+.modal-head h3{font-size:17px}
+.close{border:0;border-radius:50%;width:35px;height:35px;background:#edf3f1}
+.admin-menu{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.admin-menu button{padding:12px;border:1px solid var(--border);background:#f7fbf9;border-radius:10px;color:var(--g);font-weight:bold}
+.admin-section{display:none}
+.admin-section.active{display:block}
+.footer{text-align:center;color:var(--muted);font-size:10px;padding:25px;line-height:1.8}
+.hidden{display:none!important}
+@media(min-width:650px){
+.grid{grid-template-columns:repeat(3,1fr)}
+.kebele-grid{grid-template-columns:repeat(3,1fr)}
+.hero{padding:35px}
+.hero h2{font-size:32px}
+}
 </style>
 </head>
 <body>
-<header class="topbar"><div class="brand"><div class="logo">G1</div><div><h1>GEDEB ONE</h1><small>SMART DIGITAL CITY ECOSYSTEM</small></div></div><div class="top-actions"><button class="top-btn" id="langBtn" onclick="toggleLanguage()">EN</button><button class="top-btn" onclick="openAdmin()">⚙ Admin</button></div></header>
+
+<header class="topbar">
+<div class="brand">
+<div class="logo">G1</div>
+<div>
+<h1>GEDEB ONE</h1>
+<small>SMART DIGITAL CITY ECOSYSTEM</small>
+</div>
+</div>
+<div class="top-actions">
+<button class="top-btn" id="langBtn" onclick="toggleLanguage()">EN</button>
+<button class="top-btn" onclick="openAdmin()">⚙ Admin</button>
+</div>
+</header>
+
 <main class="container">
+
 <section id="home" class="page active">
-<div class="hero"><span class="hero-tag">SMART DIGITAL GEDEB</span><h2 data-am="እንኳን ወደ GEDEB ONE በደህና መጡ!" data-en="WELCOME TO GEDEB ONE!">እንኳን ወደ GEDEB ONE በደህና መጡ!</h2><p data-am="የገደብ ወረዳና ከተማ አገልግሎቶችን፣ መረጃዎችንና የልማት ዕድሎችን በአንድ ዲጂታል መድረክ ያግኙ።" data-en="Access Gedeb services, information and development opportunities in one digital platform.">የገደብ ወረዳና ከተማ አገልግሎቶችን፣ መረጃዎችንና የልማት ዕድሎችን በአንድ ዲጂታል መድረክ ያግኙ።</p><div class="hero-buttons"><button class="primary" onclick="showPage('services')">አገልግሎቶችን ይመልከቱ</button><button class="light" onclick="showPage('complaint')">ቅሬታ ያቅርቡ</button></div></div>
-<div class="stats"><div class="stat"><strong>11</strong><span>ቀበሌዎች</span></div><div class="stat"><strong>18+</strong><span>ዲጂታል ክፍሎች</span></div><div class="stat"><strong>24/7</strong><span>ዲጂታል መድረሻ</span></div></div>
-<div class="heading"><h3>ዋና አገልግሎቶች</h3><small onclick="showPage('services')">ሁሉንም ይመልከቱ →</small></div><div class="grid" id="homeServices"></div>
-<div class="heading"><h3>ፈጣን መዳረሻ</h3></div><div class="grid">
+<div class="hero">
+<span class="hero-tag">SMART DIGITAL GEDEB</span>
+<h2 data-am="እንኳን ወደ GEDEB ONE በደህና መጡ!" data-en="WELCOME TO GEDEB ONE!">እንኳን ወደ GEDEB ONE በደህና መጡ!</h2>
+<p data-am="የገደብ ወረዳና ከተማ አገልግሎቶችን፣ መረጃዎችንና የልማት ዕድሎችን በአንድ ዲጂታል መድረክ ያግኙ።" data-en="Access Gedeb services, information and development opportunities in one digital platform.">የገደብ ወረዳና ከተማ አገልግሎቶችን፣ መረጃዎችንና የልማት ዕድሎችን በአንድ ዲጂታል መድረክ ያግኙ።</p>
+<div class="hero-buttons">
+<button class="primary" onclick="showPage('services')">አገልግሎቶችን ይመልከቱ</button>
+<button class="light" onclick="showPage('complaint')">ቅሬታ ያቅርቡ</button>
+</div>
+</div>
+
+<div class="stats">
+<div class="stat"><strong>11</strong><span>ቀበሌዎች</span></div>
+<div class="stat"><strong>18+</strong><span>ዲጂታል ክፍሎች</span></div>
+<div class="stat"><strong>24/7</strong><span>ዲጂታል መድረሻ</span></div>
+</div>
+
+<div class="heading">
+<h3>ዋና አገልግሎቶች</h3>
+<small onclick="showPage('services')">ሁሉንም ይመልከቱ →</small>
+</div>
+<div class="grid" id="homeServices"></div>
+
+<div class="heading"><h3>ፈጣን መዳረሻ</h3></div>
+<div class="grid">
 <button class="card" onclick="showPage('jobs')"><div class="ico">💼</div><strong>የሥራ ዕድሎች</strong><small>የሥራ ማስታወቂያዎች</small></button>
 <button class="card" onclick="showPage('map')"><div class="ico">🗺️</div><strong>ዲጂታል ካርታ</strong><small>የገደብ ካርታ</small></button>
 <button class="card" onclick="showPage('ai')"><div class="ico">🤖</div><strong>GEDEB AI</strong><small>ዲጂታል ረዳት</small></button>
-<button class="card" onclick="showPage('kebeles')"><div class="ico">📍</div><strong>ቀበሌዎች</strong><small>የአካባቢ መረጃ</small></button></div>
-<div class="heading"><h3>የቅርብ ጊዜ ማስታወቂያዎች</h3></div><div class="panel" id="homeAnnouncements"></div>
-<div class="notice">GEDEB ONE የፕሮጀክት ማሳያ መድረክ ነው። ኦፊሴላዊ የመንግሥት አገልግሎት ከመሆኑ በፊት የተገቢው አስተዳደር ፈቃድና የተረጋገጠ መረጃ ያስፈልጋል።</div></section>
-<section id="services" class="page"><div class="heading"><h3>ዲጂታል አገልግሎቶች</h3></div><div class="grid" id="allServices"></div></section>
-<section id="kebeles" class="page"><div class="heading"><h3>የገደብ 11 ቀበሌዎች</h3></div><div class="panel"><div class="kebele-grid" id="kebeleList"></div></div><div class="notice">የቀበሌ ስሞቹ በተጠቃሚው በተሰጠው ዝርዝር መሠረት ተመዝግበዋል። የአስተዳደሩ ኦፊሴላዊ ማረጋገጫ ያስፈልጋል።</div></section>
-<section id="complaint" class="page"><div class="heading"><h3>ጥያቄና ቅሬታ ማቅረቢያ</h3></div><div class="panel"><form id="complaintForm">
-<div class="form-group"><label>ሙሉ ስም</label><input id="personName" required maxlength="100"></div><div class="form-group"><label>ስልክ ቁጥር</label><input id="personPhone" type="tel" required maxlength="30" placeholder="09XXXXXXXX"></div>
-<div class="form-group"><label>ቀበሌ</label><select id="personKebele" required></select></div><div class="form-group"><label>የጥያቄው ዓይነት</label><select id="requestType"><option>ቅሬታ</option><option>የአገልግሎት ጥያቄ</option><option>ሀሳብ</option><option>አስቸኳይ ሪፖርት</option></select></div>
-<div class="form-group"><label>ዝርዝር መልዕክት</label><textarea id="requestMessage" required minlength="5" maxlength="4000"></textarea></div><button class="full" id="complaintSubmit" type="submit">ጥያቄውን አስገባ</button></form><div id="submitResult"></div></div></section>
-<section id="track" class="page"><div class="heading"><h3>ጥያቄዬን መከታተል</h3></div><div class="panel"><div class="form-group"><label>የመከታተያ ቁጥር</label><input id="trackCode" placeholder="GED-XXXXXXXX"></div><button class="full" onclick="trackRequest()">ፈልግ</button><div id="trackResult"></div><p class="notice">ማስታወሻ፦ የጥያቄ ሁኔታን በዚህ መሣሪያ ላይ የተቀመጠውን መረጃ ብቻ ያሳያል። ከተለያዩ ስልኮች ለመከታተል የተለየ የሕዝብ የክትትል መዋቅር ያስፈልጋል።</p></div></section>
-<section id="jobs" class="page"><div class="heading"><h3>የሥራ ማስታወቂያ ማዕከል</h3></div><div class="notice">የሥራ ዕድሎች ከተለያዩ ተቋማት ሲገኙ እዚህ ይታያሉ። ከማመልከትዎ በፊት የቀንና የቀጣሪ መረጃ ያረጋግጡ።</div><div class="panel" id="jobList"></div></section>
-<section id="map" class="page"><div class="heading"><h3>GEDEB DIGITAL MAP</h3></div><div class="panel"><p style="font-size:12px;line-height:1.8">የገደብ አካባቢን በውጫዊ ካርታ ለመፈለግ ይጠቀሙ። የቀበሌ ድንበሮችና የተቋማት መጋጠሚያ ገና አልተረጋገጡም።</p><a class="full" style="display:block;text-align:center;text-decoration:none" target="_blank" rel="noopener" href="https://www.openstreetmap.org/search?query=Gedeb%2C%20Ethiopia">የገደብ ካርታ ክፈት ↗</a><div class="form-group"><label>ቦታ ይፈልጉ</label><input id="mapSearch" placeholder="ለምሳሌ ወርቃ ሳካሮ"></div><button class="secondary" onclick="searchMap()">በካርታ ፈልግ</button></div></section>
-<section id="ai" class="page"><div class="heading"><h3>🤖 GEDEB AI ዲጂታል ረዳት</h3></div><div class="panel"><div class="notice">ይህ የማሳያ ረዳት ነው። እውነተኛ AI እንዲሆን ከደህንነቱ የተጠበቀ AI Backend ጋር ማገናኘት ያስፈልጋል።</div><div id="aiChat" class="result">ሰላም! እኔ GEDEB AI የማሳያ ረዳት ነኝ። ስለ ቀበሌ፣ ሥራ፣ ጥያቄ ወይም አገልግሎት ይጠይቁኝ።</div><div class="form-group"><label>ጥያቄዎ</label><input id="aiQuestion" placeholder="ጥያቄዎን ይጻፉ..."></div><button class="full" onclick="askAI()">ላክ</button></div></section>
-<section id="market" class="page"><div class="heading"><h3>☕ የቡናና የግብርና ገበያ</h3></div><div class="panel"><h3>የገደብ ቡና ዲጂታል ገበያ</h3><p>ገበሬዎችን፣ ሻጮችን፣ ገዢዎችንና አቅራቢዎችን ለማገናኘት የተዘጋጀ ክፍል። የቀጥታ የቡና ዋጋ ገና አልተገናኘም።</p><div class="notice">የገበያ ዋጋ ከተረጋገጠ ምንጭ ጋር ከተገናኘ በኋላ ይታያል።</div></div><div class="panel"><h3>የገበሬ መረጃ</h3><p>የምርት ማስታወቂያና የገበያ ግንኙነት።</p></div></section>
-<section id="projects" class="page"><div class="heading"><h3>የልማት ፕሮጀክቶች</h3></div><div class="panel"><h3>የገደብ ልማት ክትትል</h3><p>የመንገድ፣ የውሃ፣ የመብራት፣ የጤናና የትምህርት ፕሮጀክቶች ሁኔታ በተረጋገጠ መረጃ ሲገኝ እዚህ ይታያል።</p></div></section>
-<section id="health" class="page"><div class="heading"><h3>የጤና አገልግሎት</h3></div><div class="panel"><p>የጤና ጣቢያዎች፣ ክሊኒኮች፣ የጤና ማስታወቂያና የአደጋ ጊዜ መረጃ የሚቀርብበት ክፍል።</p></div></section>
-<section id="education" class="page"><div class="heading"><h3>የትምህርት አገልግሎት</h3></div><div class="panel"><p>የትምህርት ቤቶች፣ የስኮላርሺፕ ዕድሎች፣ ስልጠናዎችና ማስታወቂያዎች።</p></div></section>
-<section id="business" class="page"><div class="heading"><h3>ንግድና ኢንቨስትመንት</h3></div><div class="panel"><p>የንግድ ተቋማት፣ የኢንቨስትመንት ዕድሎችና የአጋርነት መረጃ።</p></div></section>
-<section id="tourism" class="page"><div class="heading"><h3>ቱሪዝምና ባህል</h3></div><div class="panel"><p>የጉብኝት ቦታዎች፣ የአካባቢ ባህልና የጎብኚ መረጃ።</p></div></section>
-<section id="news" class="page"><div class="heading"><h3>ዜናና ማስታወቂያ</h3></div><div class="panel" id="announcementList"></div></section>
-<section id="more" class="page"><div class="heading"><h3>ተጨማሪ ክፍሎች</h3></div><div class="grid">
-<button class="card" onclick="showPage('health')"><div class="ico">🏥</div><strong>ጤና</strong><small>የጤና መረጃ</small></button><button class="card" onclick="showPage('education')"><div class="ico">🎓</div><strong>ትምህርት</strong><small>የትምህርት መረጃ</small></button><button class="card" onclick="showPage('business')"><div class="ico">🏢</div><strong>ንግድና ኢንቨስትመንት</strong><small>የንግድ ዕድሎች</small></button><button class="card" onclick="showPage('tourism')"><div class="ico">🌍</div><strong>ቱሪዝም</strong><small>የጉብኝት መረጃ</small></button><button class="card" onclick="showPage('projects')"><div class="ico">🏗️</div><strong>ልማት</strong><small>የፕሮጀክት ክትትል</small></button><button class="card" onclick="showPage('news')"><div class="ico">📢</div><strong>ማስታወቂያ</strong><small>ዜናና መረጃ</small></button></div><div class="footer">GEDEB ONE<br>SMART DIGITAL CITY ECOSYSTEM<br>Founder-Led Project Proposal<br>© 2026</div></section>
+<button class="card" onclick="showPage('kebeles')"><div class="ico">📍</div><strong>ቀበሌዎች</strong><small>የአካባቢ መረጃ</small></button>
+</div>
+
+<div class="heading"><h3>የቅርብ ጊዜ ማስታወቂያዎች</h3></div>
+<div class="panel" id="homeAnnouncements"></div>
+<div class="notice">GEDEB ONE የፕሮጀክት ማሳያ መድረክ ነው። ኦፊሴላዊ የመንግሥት አገልግሎት ከመሆኑ በፊት የተገቢው አስተዳደር ፈቃድና የተረጋገጠ መረጃ ያስፈልጋል።</div>
+</section>
+
+<section id="services" class="page">
+<div class="heading"><h3>ዲጂታል አገልግሎቶች</h3></div>
+<div class="grid" id="allServices"></div>
+</section>
+
+<section id="kebeles" class="page">
+<div class="heading"><h3>የገደብ 11 ቀበሌዎች</h3></div>
+<div class="panel"><div class="kebele-grid" id="kebeleList"></div></div>
+<div class="notice">የቀበሌ ስሞቹ በተጠቃሚው በተሰጠው ዝርዝር መሠረት ተመዝግበዋል። የአስተዳደሩ ኦፊሴላዊ ማረጋገጫ ያስፈልጋል።</div>
+</section>
+
+<section id="complaint" class="page">
+<div class="heading"><h3>ጥያቄና ቅሬታ ማቅረቢያ</h3></div>
+<div class="panel">
+<form id="complaintForm">
+<div class="form-group"><label>ሙሉ ስም</label><input id="personName" required maxlength="100"></div>
+<div class="form-group"><label>ስልክ ቁጥር</label><input id="personPhone" type="tel" required maxlength="30" placeholder="09XXXXXXXX"></div>
+<div class="form-group"><label>ቀበሌ</label><select id="personKebele" required></select></div>
+<div class="form-group"><label>የጥያቄው ዓይነት</label><select id="requestType"><option>ቅሬታ</option><option>የአገልግሎት ጥያቄ</option><option>ሀሳብ</option><option>አስቸኳይ ሪፖርት</option></select></div>
+<div class="form-group"><label>ዝርዝር መልዕክት</label><textarea id="requestMessage" required minlength="5" maxlength="4000"></textarea></div>
+<button class="full" id="complaintSubmit" type="submit">ጥያቄውን አስገባ</button>
+</form>
+<div id="submitResult"></div>
+</div>
+</section>
+
+<section id="track" class="page">
+<div class="heading"><h3>ጥያቄዬን መከታተል</h3></div>
+<div class="panel">
+<div class="form-group"><label>የመከታተያ ቁጥር</label><input id="trackCode" placeholder="GED-XXXXXXXX"></div>
+<button class="full" onclick="trackRequest()">ፈልግ</button>
+<div id="trackResult"></div>
+<p class="notice">ማስታወሻ፦ የጥያቄ ሁኔታን በዚህ መሣሪያ ላይ የተቀመጠውን መረጃ ብቻ ያሳያል። ከተለያዩ ስልኮች ለመከታተል የተለየ የሕዝብ የክትትል መዋቅር ያስፈልጋል።</p>
+</div>
+</section>
+
+<section id="jobs" class="page">
+<div class="heading"><h3>የሥራ ማስታወቂያ ማዕከል</h3></div>
+<div class="notice">የሥራ ዕድሎች ከተለያዩ ተቋማት ሲገኙ እዚህ ይታያሉ። ከማመልከትዎ በፊት የቀንና የቀጣሪ መረጃ ያረጋግጡ።</div>
+<div class="panel" id="jobList"></div>
+</section>
+
+<section id="map" class="page">
+<div class="heading"><h3>GEDEB DIGITAL MAP</h3></div>
+<div class="panel">
+<p style="font-size:12px;line-height:1.8">የገደብ አካባቢን በውጫዊ ካርታ ለመፈለግ ይጠቀሙ። የቀበሌ ድንበሮችና የተቋማት መጋጠሚያ ገና አልተረጋገጡም።</p>
+<a class="full" style="display:block;text-align:center;text-decoration:none" target="_blank" rel="noopener" href="https://www.openstreetmap.org/search?query=Gedeb%2C%20Ethiopia">የገደብ ካርታ ክፈት ↗</a>
+<div class="form-group"><label>ቦታ ይፈልጉ</label><input id="mapSearch" placeholder="ለምሳሌ ወርቃ ሳካሮ"></div>
+<button class="secondary" onclick="searchMap()">በካርታ ፈልግ</button>
+</div>
+</section>
+
+<section id="ai" class="page">
+<div class="heading"><h3>🤖 GEDEB AI ዲጂታል ረዳት</h3></div>
+<div class="panel">
+<div class="notice">ይህ የማሳያ ረዳት ነው። እውነተኛ AI እንዲሆን ከደህንነቱ የተጠበቀ AI Backend ጋር ማገናኘት ያስፈልጋል።</div>
+<div id="aiChat" class="result">ሰላም! እኔ GEDEB AI የማሳያ ረዳት ነኝ። ስለ ቀበሌ፣ ሥራ፣ ጥያቄ ወይም አገልግሎት ይጠይቁኝ።</div>
+<div class="form-group"><label>ጥያቄዎ</label><input id="aiQuestion" placeholder="ጥያቄዎን ይጻፉ..."></div>
+<button class="full" onclick="askAI()">ላክ</button>
+</div>
+</section>
+
+<section id="market" class="page">
+<div class="heading"><h3>☕ የቡናና የግብርና ገበያ</h3></div>
+<div class="panel">
+<h3>የገደብ ቡና ዲጂታል ገበያ</h3>
+<p>ገበሬዎችን፣ ሻጮችን፣ ገዢዎችንና አቅራቢዎችን ለማገናኘት የተዘጋጀ ክፍል። የቀጥታ የቡና ዋጋ ገና አልተገናኘም።</p>
+<div class="notice">የገበያ ዋጋ ከተረጋገጠ ምንጭ ጋር ከተገናኘ በኋላ ይታያል።</div>
+</div>
+<div class="panel"><h3>የገበሬ መረጃ</h3><p>የምርት ማስታወቂያና የገበያ ግንኙነት።</p></div>
+</section>
+
+<section id="projects" class="page">
+<div class="heading"><h3>የልማት ፕሮጀክቶች</h3></div>
+<div class="panel">
+<h3>የገደብ ልማት ክትትል</h3>
+<p>የመንገድ፣ የውሃ፣ የመብራት፣ የጤናና የትምህርት ፕሮጀክቶች ሁኔታ በተረጋገጠ መረጃ ሲገኝ እዚህ ይታያል።</p>
+</div>
+</section>
+
+<section id="health" class="page">
+<div class="heading"><h3>የጤና አገልግሎት</h3></div>
+<div class="panel"><p>የጤና ጣቢያዎች፣ ክሊኒኮች፣ የጤና ማስታወቂያና የአደጋ ጊዜ መረጃ የሚቀርብበት ክፍል።</p></div>
+</section>
+
+<section id="education" class="page">
+<div class="heading"><h3>የትምህርት አገልግሎት</h3></div>
+<div class="panel"><p>የትምህርት ቤቶች፣ የስኮላርሺፕ ዕድሎች፣ ስልጠናዎችና ማስታወቂያዎች።</p></div>
+</section>
+
+<section id="business" class="page">
+<div class="heading"><h3>ንግድና ኢንቨስትመንት</h3></div>
+<div class="panel"><p>የንግድ ተቋማት፣ የኢንቨስትመንት ዕድሎችና የአጋርነት መረጃ።</p></div>
+</section>
+
+<section id="tourism" class="page">
+<div class="heading"><h3>ቱሪዝምና ባህል</h3></div>
+<div class="panel"><p>የጉብኝት ቦታዎች፣ የአካባቢ ባህልና የጎብኚ መረጃ።</p></div>
+</section>
+
+<section id="news" class="page">
+<div class="heading"><h3>ዜናና ማስታወቂያ</h3></div>
+<div class="panel" id="announcementList"></div>
+</section>
+
+<section id="more" class="page">
+<div class="heading"><h3>ተጨማሪ ክፍሎች</h3></div>
+<div class="grid">
+<button class="card" onclick="showPage('health')"><div class="ico">🏥</div><strong>ጤና</strong><small>የጤና መረጃ</small></button>
+<button class="card" onclick="showPage('education')"><div class="ico">🎓</div><strong>ትምህርት</strong><small>የትምህርት መረጃ</small></button>
+<button class="card" onclick="showPage('business')"><div class="ico">🏢</div><strong>ንግድና ኢንቨስትመንት</strong><small>የንግድ ዕድሎች</small></button>
+<button class="card" onclick="showPage('tourism')"><div class="ico">🌍</div><strong>ቱሪዝም</strong><small>የጉብኝት መረጃ</small></button>
+<button class="card" onclick="showPage('projects')"><div class="ico">🏗️</div><strong>ልማት</strong><small>የፕሮጀክት ክትትል</small></button>
+<button class="card" onclick="showPage('news')"><div class="ico">📢</div><strong>ማስታወቂያ</strong><small>ዜናና መረጃ</small></button>
+</div>
+<div class="footer">GEDEB ONE<br>SMART DIGITAL CITY ECOSYSTEM<br>Founder-Led Project Proposal<br>© 2026</div>
+</section>
+
 </main>
-<nav class="bottom-nav"><button class="nav-btn active" data-page="home" onclick="showPage('home')"><span>⌂</span>ዋና</button><button class="nav-btn" data-page="services" onclick="showPage('services')"><span>▦</span>አገልግሎት</button><button class="nav-btn" data-page="complaint" onclick="showPage('complaint')"><span>✎</span>ቅሬታ</button><button class="nav-btn" data-page="track" onclick="showPage('track')"><span>⌕</span>ክትትል</button><button class="nav-btn" data-page="more" onclick="showPage('more')"><span>•••</span>ተጨማሪ</button></nav>
-<div class="modal" id="adminModal" onclick="outsideClose(event,'adminModal')"><div class="modal-box"><div class="modal-head"><h3>⚙ የአስተዳደር Dashboard</h3><button class="close" onclick="closeModal('adminModal')">×</button></div>
-<div id="adminLoginPanel"><div class="notice">የተፈቀደለት አስተዳዳሪ ብቻ መግባት ይችላል። በFirebase Authentication የተፈጠረውን ኢሜልና የይለፍ ቃል ይጠቀሙ።</div><form id="adminLoginForm"><div class="form-group"><label>ኢሜል</label><input id="adminEmail" type="email" autocomplete="username" required></div><div class="form-group"><label>የይለፍ ቃል</label><input id="adminPassword" type="password" autocomplete="current-password" required></div><button class="full" id="adminLoginButton" type="submit">ግባ</button></form><div id="adminLoginMessage" class="result hidden"></div></div>
-<div id="adminDashboard" class="hidden"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><small id="adminSignedIn"></small><button class="danger" onclick="adminLogout()">ውጣ</button></div><div class="admin-menu" style="margin-top:14px"><button onclick="adminTab('overview')">📊 አጠቃላይ</button><button onclick="adminTab('requests')">📨 ጥያቄዎች</button><button onclick="adminTab('jobsAdmin')">💼 ሥራ መጨመር</button><button onclick="adminTab('newsAdmin')">📢 ማስታወቂያ</button></div>
-<div id="overview" class="admin-section active"><h3>አጠቃላይ ሪፖርት</h3><div id="adminStats"></div></div><div id="requests" class="admin-section"><h3>የዜጎች ጥያቄዎች</h3><div id="adminRequests"></div></div>
-<div id="jobsAdmin" class="admin-section"><h3>የሥራ ማስታወቂያ ጨምር</h3><div class="form-group"><label>የሥራ ስም</label><input id="jobTitle"></div><div class="form-group"><label>ቀጣሪ / ድርጅት</label><input id="jobEmployer"></div><div class="form-group"><label>ቦታ</label><input id="jobLocation"></div><div class="form-group"><label>ዝርዝር መረጃ</label><textarea id="jobDescription"></textarea></div><button class="full" onclick="addJob()">ማስታወቂያውን አስቀምጥ</button><div id="adminJobList"></div></div>
-<div id="newsAdmin" class="admin-section"><h3>ዜና / ማስታወቂያ ጨምር</h3><div class="form-group"><label>ርዕስ</label><input id="newsTitle"></div><div class="form-group"><label>ዝርዝር</label><textarea id="newsDescription"></textarea></div><button class="full" onclick="addNews()">ማስታወቂያ አስቀምጥ</button><div id="adminNewsList"></div></div></div>
-</div></div>
+
+<nav class="bottom-nav">
+<button class="nav-btn active" data-page="home" onclick="showPage('home')"><span>⌂</span>ዋና</button>
+<button class="nav-btn" data-page="services" onclick="showPage('services')"><span>▦</span>አገልግሎት</button>
+<button class="nav-btn" data-page="complaint" onclick="showPage('complaint')"><span>✎</span>ቅሬታ</button>
+<button class="nav-btn" data-page="track" onclick="showPage('track')"><span>⌕</span>ክትትል</button>
+<button class="nav-btn" data-page="more" onclick="showPage('more')"><span>•••</span>ተጨማሪ</button>
+</nav>
+
+<div class="modal" id="adminModal" onclick="outsideClose(event,'adminModal')">
+<div class="modal-box">
+<div class="modal-head">
+<h3>⚙ የአስተዳደር Dashboard</h3>
+<button class="close" onclick="closeModal('adminModal')">×</button>
+</div>
+
+<div id="adminLoginPanel">
+<div class="notice">የተፈቀደለት አስተዳዳሪ ብቻ መግባት ይችላል። በFirebase Authentication የተፈጠረውን ኢሜልና የይለፍ ቃል ይጠቀሙ።</div>
+<form id="adminLoginForm">
+<div class="form-group"><label>ኢሜል</label><input id="adminEmail" type="email" autocomplete="username" required></div>
+<div class="form-group"><label>የይለፍ ቃል</label><input id="adminPassword" type="password" autocomplete="current-password" required></div>
+<button class="full" id="adminLoginButton" type="submit">ግባ</button>
+</form>
+<div id="adminLoginMessage" class="result hidden"></div>
+</div>
+
+<div id="adminDashboard" class="hidden">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+<small id="adminSignedIn"></small>
+<button class="danger" onclick="adminLogout()">ውጣ</button>
+</div>
+
+<div class="admin-menu" style="margin-top:14px">
+<button onclick="adminTab('overview')">📊 አጠቃላይ</button>
+<button onclick="adminTab('requests')">📨 ጥያቄዎች</button>
+<button onclick="adminTab('jobsAdmin')">💼 ሥራ መጨመር</button>
+<button onclick="adminTab('newsAdmin')">📢 ማስታወቂያ</button>
+</div>
+
+<div id="overview" class="admin-section active">
+<h3>አጠቃላይ ሪፖርት</h3>
+<div id="adminStats"></div>
+</div>
+
+<div id="requests" class="admin-section">
+<h3>የዜጎች ጥያቄዎች</h3>
+<div id="adminRequests"></div>
+</div>
+
+<div id="jobsAdmin" class="admin-section">
+<h3>የሥራ ማስታወቂያ ጨምር</h3>
+<div class="form-group"><label>የሥራ ስም</label><input id="jobTitle"></div>
+<div class="form-group"><label>ቀጣሪ / ድርጅት</label><input id="jobEmployer"></div>
+<div class="form-group"><label>ቦታ</label><input id="jobLocation"></div>
+<div class="form-group"><label>ዝርዝር መረጃ</label><textarea id="jobDescription"></textarea></div>
+<button class="full" onclick="addJob()">ማስታወቂያውን አስቀምጥ</button>
+<div id="adminJobList"></div>
+</div>
+
+<div id="newsAdmin" class="admin-section">
+<h3>ዜና / ማስታወቂያ ጨምር</h3>
+<div class="form-group"><label>ርዕስ</label><input id="newsTitle"></div>
+<div class="form-group"><label>ዝርዝር</label><textarea id="newsDescription"></textarea></div>
+<button class="full" onclick="addNews()">ማስታወቂያ አስቀምጥ</button>
+<div id="adminNewsList"></div>
+</div>
+
+</div>
+</div>
+</div>
 
 <script>
-const kebeles=["ገደብ ባሬዳ","ገደብ ሴሶሌ","ባደሳ","ጋልቻ","ባንቆ ጣጣቱ","ሐሎ ባርት","ወርቃ ሳካሮ","ወርቃ ጨልበሳ","ባንቆ ጨልጨለ","ባንቆ ጎቲቲ","ገደብ ጉበታ"];
+const kebeles=[
+"ገደብ ባሬዳ","ገደብ ሴሶሌ","ባደሳ","ጋልቻ",
+"ባንቆ ጣጣቱ","ሐሎ ባርት","ወርቃ ሳካሮ",
+"ወርቃ ጨልበሳ","ባንቆ ጨልጨለ","ባንቆ ጎቲቲ","ገደብ ጉበታ"
+];
+
 let language=localStorage.getItem("gedebLanguage")||"am";
-let adminUser=null, isAdmin=false, remoteRequests=[], remoteJobs=[], remoteNews=[];
+let adminUser=null,isAdmin=false,remoteRequests=[],remoteJobs=[],remoteNews=[];
+
 const services=[
 ["🏛️","የመንግሥት አገልግሎት","Government Services","የአስተዳደር ጥያቄዎችና ማመልከቻዎች","Government requests and applications","complaint"],
 ["🗺️","ዲጂታል ካርታ","Digital Map","የከተማና የቀበሌ መረጃ","City and kebele information","map"],
@@ -97,59 +357,630 @@ const services=[
 ["📝","የሰነድ አገልግሎት","Document Services","ቅጾችና ማመልከቻዎች","Forms and applications","complaint"],
 ["👥","የሕዝብ ተሳትፎ","Citizen Participation","የሕዝብ ሀሳብና ጥያቄ","Citizen feedback","complaint"],
 ["📍","የቀበሌ መረጃ","Kebele Information","የአካባቢ መረጃ","Local information","kebeles"],
-["🔔","የድንገተኛ ማሳወቂያ","Emergency Notices","አስቸኳይ መረጃ","Emergency notices","news"]];
-function t(am,en){return language==="am"?am:en}
-function getData(key){try{return JSON.parse(localStorage.getItem(key)||"[]")}catch(e){return []}}
-function saveData(key,data){localStorage.setItem(key,JSON.stringify(data))}
-function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
-function renderServices(){const make=s=>`<button class="card" onclick="showPage('${s[5]}')"><div class="ico">${s[0]}</div><strong>${t(s[1],s[2])}</strong><small>${t(s[3],s[4])}</small></button>`;document.getElementById("homeServices").innerHTML=services.slice(0,4).map(make).join("");document.getElementById("allServices").innerHTML=services.map(make).join("")}
-function renderKebeles(){document.getElementById("kebeleList").innerHTML=kebeles.map((k,i)=>`<div class="kebele">${i+1}. ${esc(k)}</div>`).join("");document.getElementById("personKebele").innerHTML='<option value="">ቀበሌ ይምረጡ</option>'+kebeles.map(k=>`<option value="${esc(k)}">${esc(k)}</option>`).join("")}
-function showPage(id){const p=document.getElementById(id);if(!p)return;document.querySelectorAll(".page").forEach(x=>x.classList.remove("active"));p.classList.add("active");document.querySelectorAll(".nav-btn").forEach(b=>b.classList.toggle("active",b.dataset.page===id));window.scrollTo({top:0,behavior:"smooth"})}
-function toggleLanguage(){language=language==="am"?"en":"am";localStorage.setItem("gedebLanguage",language);document.documentElement.lang=language;document.querySelectorAll("[data-am]").forEach(el=>el.textContent=el.getAttribute(language==="am"?"data-am":"data-en"));document.getElementById("langBtn").textContent=language==="am"?"EN":"አማ";renderServices()}
-function getRequests(){return getData("gedebRequests")}
-function copyCode(code){if(navigator.clipboard?.writeText){navigator.clipboard.writeText(code).then(()=>alert("ተኮፒ ተደርጓል።")).catch(()=>prompt("የመከታተያ ቁጥር",code))}else prompt("የመከታተያ ቁጥር",code)}
-document.getElementById("complaintForm").addEventListener("submit",async function(e){e.preventDefault();const btn=document.getElementById("complaintSubmit");btn.disabled=true;btn.textContent="በመላክ ላይ...";const code="GED-"+Math.random().toString(36).slice(2,10).toUpperCase();const r={code,name:document.getElementById("personName").value.trim(),phone:document.getElementById("personPhone").value.trim(),kebele:document.getElementById("personKebele").value,type:document.getElementById("requestType").value,message:document.getElementById("requestMessage").value.trim(),status:"ተቀባ / Received",date:new Date().toISOString()};try{const fb=window.GEDEB_FIREBASE;if(!fb)throw new Error("Firebase ገና አልተገናኘም።");const ref=await fb.addDoc(fb.collection(fb.db,"complaints"),r);r.id=ref.id;const list=getRequests();list.push(r);saveData("gedebRequests",list);document.getElementById("submitResult").innerHTML=`<div class="result"><strong>ጥያቄዎ በመስመር ላይ ተልኳል!</strong><br>የመከታተያ ቁጥርዎ፦<br><strong style="font-size:21px">${esc(code)}</strong><br>ይህንን ቁጥር ያስቀምጡ።<br><button class="secondary" onclick="copyCode('${code}')">ቁጥሩን ኮፒ አድርግ</button></div>`;this.reset()}catch(err){document.getElementById("submitResult").innerHTML=`<div class="notice">ጥያቄው ወደ ሰርቨር አልተላከም። የኢንተርኔት/Firebase ግንኙነትን ያረጋግጡ።<br>${esc(err.message)}</div>`}finally{btn.disabled=false;btn.textContent="ጥያቄውን አስገባ"}});
-function trackRequest(){const code=document.getElementById("trackCode").value.trim().toUpperCase(),found=getRequests().find(r=>String(r.code).toUpperCase()===code),out=document.getElementById("trackResult");if(!found){out.innerHTML='<div class="result">ይህ ቁጥር በዚህ ስልክ ላይ አልተገኘም።</div>';return}out.innerHTML=`<div class="result"><strong>ጥያቄው ተገኝቷል</strong><br>ቁጥር፦ ${esc(found.code)}<br>ቀበሌ፦ ${esc(found.kebele)}<br>ሁኔታ፦ ${esc(found.status)}<br>ቀን፦ ${new Date(found.date).toLocaleDateString()}</div>`}
-function openAdmin(){document.getElementById("adminModal").classList.add("show");if(isAdmin){showAdminDashboard();adminTab("overview")}else showAdminLogin()}
-function closeModal(id){document.getElementById(id).classList.remove("show")}
-function outsideClose(e,id){if(e.target.id===id)closeModal(id)}
-function showAdminLogin(){document.getElementById("adminLoginPanel").classList.remove("hidden");document.getElementById("adminDashboard").classList.add("hidden")}
-function showAdminDashboard(){document.getElementById("adminLoginPanel").classList.add("hidden");document.getElementById("adminDashboard").classList.remove("hidden");document.getElementById("adminSignedIn").textContent="ገብተዋል፦ "+(adminUser?.email||"Admin");renderAdmin()}
-function requireAdmin(){if(!isAdmin){showAdminLogin();return false}return true}
-function adminTab(id){if(!requireAdmin())return;document.querySelectorAll(".admin-section").forEach(x=>x.classList.remove("active"));document.getElementById(id).classList.add("active");renderAdmin()}
-function renderAdmin(){if(!requireAdmin())return;const requests=remoteRequests,jobs=remoteJobs,news=remoteNews;document.getElementById("adminStats").innerHTML=`<div class="stats"><div class="stat"><strong>${requests.length}</strong><span>ጥያቄዎች</span></div><div class="stat"><strong>${jobs.length}</strong><span>የሥራ ማስታወቂያዎች</span></div><div class="stat"><strong>${news.length}</strong><span>ማስታወቂያዎች</span></div></div>`;document.getElementById("adminRequests").innerHTML=requests.length?requests.slice().reverse().map(r=>`<div class="item"><strong>${esc(r.name)} — ${esc(r.code)}</strong><p>${esc(r.type)} | ${esc(r.kebele)}<br>${esc(r.message)}<br>ስልክ፦ ${esc(r.phone)}</p><span class="tag">${esc(r.status)}</span><div class="form-group"><label>የጥያቄ ሁኔታ ቀይር</label><select onchange="updateRequest('${esc(r.id)}',this.value)"><option ${r.status==="ተቀባ / Received"?"selected":""}>ተቀባ / Received</option><option ${r.status==="በሂደት ላይ / Processing"?"selected":""}>በሂደት ላይ / Processing</option><option ${r.status==="ተጠናቋል / Completed"?"selected":""}>ተጠናቋል / Completed</option></select></div></div>`).join(""):"<p>ጥያቄ የለም።</p>";document.getElementById("adminJobList").innerHTML=jobs.map(j=>`<div class="item"><strong>${esc(j.title)}</strong><p>${esc(j.employer)} | ${esc(j.location)}</p><button class="danger" onclick="deleteJob('${esc(j.id)}')">ሰርዝ</button></div>`).join("");document.getElementById("adminNewsList").innerHTML=news.map(n=>`<div class="item"><strong>${esc(n.title)}</strong><p>${esc(n.description)}</p><button class="danger" onclick="deleteNews('${esc(n.id)}')">ሰርዝ</button></div>`).join("")}
-async function refreshAdminData(){if(!requireAdmin())return;const fb=window.GEDEB_FIREBASE;try{const [rq,jb,nw]=await Promise.all([fb.getDocs(fb.collection(fb.db,"complaints")),fb.getDocs(fb.collection(fb.db,"jobs")),fb.getDocs(fb.collection(fb.db,"announcements"))]);remoteRequests=rq.docs.map(d=>({id:d.id,...d.data()}));remoteJobs=jb.docs.map(d=>({id:d.id,...d.data()}));remoteNews=nw.docs.map(d=>({id:d.id,...d.data()}));renderAdmin();renderJobs();renderNews()}catch(e){alert("መረጃዎችን ከFirebase ማምጣት አልተቻለም፦ "+e.message)}}
-async function updateRequest(id,status){if(!requireAdmin())return;try{const fb=window.GEDEB_FIREBASE;await fb.updateDoc(fb.doc(fb.db,"complaints",id),{status});await refreshAdminData()}catch(e){alert("ሁኔታውን መቀየር አልተቻለም፦ "+e.message)}}
-async function addJob(){if(!requireAdmin())return;const title=document.getElementById("jobTitle").value.trim(),employer=document.getElementById("jobEmployer").value.trim(),location=document.getElementById("jobLocation").value.trim(),description=document.getElementById("jobDescription").value.trim();if(!title||!employer||!description){alert("እባክዎ አስፈላጊ መረጃዎችን ይሙሉ።");return}try{const fb=window.GEDEB_FIREBASE;await fb.addDoc(fb.collection(fb.db,"jobs"),{title,employer,location,description,date:new Date().toISOString()});["jobTitle","jobEmployer","jobLocation","jobDescription"].forEach(id=>document.getElementById(id).value="");await refreshAdminData();alert("የሥራ ማስታወቂያው በFirebase ተቀምጧል።")}catch(e){alert("ማስቀመጥ አልተቻለም፦ "+e.message)}}
-async function deleteJob(id){if(!requireAdmin()||!confirm("ይህንን ማስታወቂያ ሰርዝ?"))return;try{const fb=window.GEDEB_FIREBASE;await fb.deleteDoc(fb.doc(fb.db,"jobs",id));await refreshAdminData()}catch(e){alert("መሰረዝ አልተቻለም፦ "+e.message)}}
-async function addNews(){if(!requireAdmin())return;const title=document.getElementById("newsTitle").value.trim(),description=document.getElementById("newsDescription").value.trim();if(!title||!description){alert("ርዕስና ዝርዝር መረጃ ያስገቡ።");return}try{const fb=window.GEDEB_FIREBASE;await fb.addDoc(fb.collection(fb.db,"announcements"),{title,description,date:new Date().toISOString()});document.getElementById("newsTitle").value="";document.getElementById("newsDescription").value="";await refreshAdminData();alert("ማስታወቂያው በFirebase ተቀምጧል።")}catch(e){alert("ማስቀመጥ አልተቻለም፦ "+e.message)}}
-async function deleteNews(id){if(!requireAdmin()||!confirm("ማስታወቂያውን ሰርዝ?"))return;try{const fb=window.GEDEB_FIREBASE;await fb.deleteDoc(fb.doc(fb.db,"announcements",id));await refreshAdminData()}catch(e){alert("መሰረዝ አልተቻለም፦ "+e.message)}}
-function renderJobs(){const a=remoteJobs.length?remoteJobs:getData("gedebJobs");document.getElementById("jobList").innerHTML=a.length?a.slice().reverse().map(j=>`<div class="item"><strong>${esc(j.title)}</strong><p>ቀጣሪ፦ ${esc(j.employer)}<br>ቦታ፦ ${esc(j.location)}<br>${esc(j.description)}</p><span class="tag">${esc(j.date||"")}</span></div>`).join(""):"<p>እስካሁን የተጨመረ የሥራ ማስታወቂያ የለም።</p>"}
-function renderNews(){const a=remoteNews.length?remoteNews:getData("gedebNews");const h=a.length?a.slice().reverse().map(n=>`<div class="item"><strong>${esc(n.title)}</strong><p>${esc(n.description)}</p><span class="tag">${esc(n.date||"")}</span></div>`).join(""):"<p>ማስታወቂያ የለም።</p>";document.getElementById("announcementList").innerHTML=h;document.getElementById("homeAnnouncements").innerHTML=h}
-function searchMap(){const q=document.getElementById("mapSearch").value.trim();if(!q){alert("የሚፈልጉትን ቦታ ያስገቡ።");return}window.open("https://www.openstreetmap.org/search?query="+encodeURIComponent(q+" Gedeb Ethiopia"),"_blank","noopener")}
-function askAI(){const q=document.getElementById("aiQuestion").value.trim();if(!q)return;const x=q.toLowerCase();let a="ይህንን ጥያቄ በትክክል ለመመለስ ከተረጋገጠ የወረዳ መረጃና ከእውነተኛ AI ጋር መገናኘት ያስፈልጋል።";if(x.includes("ቀበሌ")||x.includes("kebele"))a="GEDEB ONE 11 ቀበሌዎችን ይዟል። በቀበሌዎች ገጽ ዝርዝራቸውን ይመልከቱ።";else if(x.includes("ሥራ")||x.includes("ስራ")||x.includes("job"))a="የሥራ ማስታወቂያዎችን በየሥራ ማዕከል ገጽ ይመልከቱ።";else if(x.includes("ቅሬታ")||x.includes("ጥያቄ"))a="ቅሬታ ወይም ጥያቄ ለማቅረብ የቅሬታ ገጹን ይጠቀሙ።";else if(x.includes("ካርታ")||x.includes("map"))a="የገደብ ካርታን ለመፈለግ Digital Map ገጹን ይጠቀሙ።";document.getElementById("aiChat").innerHTML="<strong>እርስዎ፦</strong> "+esc(q)+"<hr><strong>GEDEB AI፦</strong> "+esc(a);document.getElementById("aiQuestion").value=""}
-document.getElementById("adminLoginForm").addEventListener("submit",async e=>{e.preventDefault();const msg=document.getElementById("adminLoginMessage"),btn=document.getElementById("adminLoginButton");msg.classList.remove("hidden");msg.textContent="መግቢያውን በማረጋገጥ ላይ...";btn.disabled=true;try{const fb=window.GEDEB_FIREBASE;if(!fb)throw new Error("Firebase ገና አልተገናኘም።");const cred=await fb.signInWithEmailAndPassword(fb.auth,document.getElementById("adminEmail").value.trim(),document.getElementById("adminPassword").value);const snap=await fb.getDoc(fb.doc(fb.db,"admins",cred.user.uid));if(!snap.exists()||snap.data().role!=="admin"||snap.data().active!==true){await fb.signOut(fb.auth);throw new Error("ይህ መለያ የነቃ Admin ፈቃድ የለውም።")}adminUser=cred.user;isAdmin=true;msg.classList.add("hidden");showAdminDashboard();await refreshAdminData()}catch(err){msg.textContent="መግባት አልተቻለም፦ "+err.message}finally{btn.disabled=false}});
-async function adminLogout(){try{const fb=window.GEDEB_FIREBASE;if(fb)await fb.signOut(fb.auth)}catch(e){console.error(e)}adminUser=null;isAdmin=false;showAdminLogin();document.getElementById("adminPassword").value=""}
+["🔔","የድንገተኛ ማሳወቂያ","Emergency Notices","አስቸኳይ መረጃ","Emergency notices","news"]
+];
+
+function t(am,en){
+return language==="am"?am:en;
+}
+
+function getData(key){
+try{return JSON.parse(localStorage.getItem(key)||"[]")}
+catch(e){return []}
+}
+
+function saveData(key,data){
+localStorage.setItem(key,JSON.stringify(data));
+}
+
+function esc(s){
+return String(s??"").replace(/[&<>"']/g,c=>({
+"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+}[c]));
+}
+
+function renderServices(){
+const make=s=>`<button class="card" onclick="showPage('${s[5]}')"><div class="ico">${s[0]}</div><strong>${t(s[1],s[2])}</strong><small>${t(s[3],s[4])}</small></button>`;
+document.getElementById("homeServices").innerHTML=services.slice(0,4).map(make).join("");
+document.getElementById("allServices").innerHTML=services.map(make).join("");
+}
+
+function renderKebeles(){
+document.getElementById("kebeleList").innerHTML=kebeles.map((k,i)=>`<div class="kebele">${i+1}. ${esc(k)}</div>`).join("");
+document.getElementById("personKebele").innerHTML='<option value="">ቀበሌ ይምረጡ</option>'+kebeles.map(k=>`<option value="${esc(k)}">${esc(k)}</option>`).join("");
+}
+
+function showPage(id){
+const p=document.getElementById(id);
+if(!p)return;
+document.querySelectorAll(".page").forEach(x=>x.classList.remove("active"));
+p.classList.add("active");
+document.querySelectorAll(".nav-btn").forEach(b=>b.classList.toggle("active",b.dataset.page===id));
+window.scrollTo({top:0,behavior:"smooth"});
+}
+
+function toggleLanguage(){
+language=language==="am"?"en":"am";
+localStorage.setItem("gedebLanguage",language);
+document.documentElement.lang=language;
+document.querySelectorAll("[data-am]").forEach(el=>el.textContent=el.getAttribute(language==="am"?"data-am":"data-en"));
+document.getElementById("langBtn").textContent=language==="am"?"EN":"አማ";
+renderServices();
+}
+
+function getRequests(){
+return getData("gedebRequests");
+}
+
+function copyCode(code){
+if(navigator.clipboard?.writeText){
+navigator.clipboard.writeText(code).then(()=>alert("ተኮፒ ተደርጓል።")).catch(()=>prompt("የመከታተያ ቁጥር",code));
+}else{
+prompt("የመከታተያ ቁጥር",code);
+}
+}
+
+document.getElementById("complaintForm").addEventListener("submit",async function(e){
+e.preventDefault();
+const btn=document.getElementById("complaintSubmit");
+btn.disabled=true;
+btn.textContent="በመላክ ላይ...";
+
+const code="GED-"+Math.random().toString(36).slice(2,10).toUpperCase();
+
+const r={
+code,
+name:document.getElementById("personName").value.trim(),
+phone:document.getElementById("personPhone").value.trim(),
+kebele:document.getElementById("personKebele").value,
+type:document.getElementById("requestType").value,
+message:document.getElementById("requestMessage").value.trim(),
+status:"ተቀባ / Received",
+date:new Date().toISOString()
+};
+
+try{
+const fb=window.GEDEB_FIREBASE;
+if(!fb)throw new Error("Firebase ገና አልተገናኘም።");
+
+const ref=await fb.addDoc(fb.collection(fb.db,"complaints"),r);
+r.id=ref.id;
+
+const list=getRequests();
+list.push(r);
+saveData("gedebRequests",list);
+
+document.getElementById("submitResult").innerHTML=`
+<div class="result">
+<strong>ጥያቄዎ በመስመር ላይ ተልኳል!</strong><br>
+የመከታተያ ቁጥርዎ፦<br>
+<strong style="font-size:21px">${esc(code)}</strong><br>
+ይህንን ቁጥር ያስቀምጡ።<br>
+<button class="secondary" onclick="copyCode('${code}')">ቁጥሩን ኮፒ አድርግ</button>
+</div>`;
+
+this.reset();
+
+}catch(err){
+document.getElementById("submitResult").innerHTML=`
+<div class="notice">
+ጥያቄው ወደ ሰርቨር አልተላከም። የኢንተርኔት/Firebase ግንኙነትን ያረጋግጡ።<br>
+${esc(err.message)}
+</div>`;
+}finally{
+btn.disabled=false;
+btn.textContent="ጥያቄውን አስገባ";
+}
+});
+
+function trackRequest(){
+const code=document.getElementById("trackCode").value.trim().toUpperCase();
+const found=getRequests().find(r=>String(r.code).toUpperCase()===code);
+const out=document.getElementById("trackResult");
+
+if(!found){
+out.innerHTML='<div class="result">ይህ ቁጥር በዚህ ስልክ ላይ አልተገኘም።</div>';
+return;
+}
+
+out.innerHTML=`
+<div class="result">
+<strong>ጥያቄው ተገኝቷል</strong><br>
+ቁጥር፦ ${esc(found.code)}<br>
+ቀበሌ፦ ${esc(found.kebele)}<br>
+ሁኔታ፦ ${esc(found.status)}<br>
+ቀን፦ ${new Date(found.date).toLocaleDateString()}
+</div>`;
+}
+
+function openAdmin(){
+document.getElementById("adminModal").classList.add("show");
+if(isAdmin){
+showAdminDashboard();
+adminTab("overview");
+}else{
+showAdminLogin();
+}
+}
+
+function closeModal(id){
+document.getElementById(id).classList.remove("show");
+}
+
+function outsideClose(e,id){
+if(e.target.id===id)closeModal(id);
+}
+
+function showAdminLogin(){
+document.getElementById("adminLoginPanel").classList.remove("hidden");
+document.getElementById("adminDashboard").classList.add("hidden");
+}
+
+function showAdminDashboard(){
+document.getElementById("adminLoginPanel").classList.add("hidden");
+document.getElementById("adminDashboard").classList.remove("hidden");
+document.getElementById("adminSignedIn").textContent="ገብተዋል፦ "+(adminUser?.email||"Admin");
+renderAdmin();
+}
+
+function requireAdmin(){
+if(!isAdmin){
+showAdminLogin();
+return false;
+}
+return true;
+}
+
+function adminTab(id){
+if(!requireAdmin())return;
+document.querySelectorAll(".admin-section").forEach(x=>x.classList.remove("active"));
+document.getElementById(id).classList.add("active");
+renderAdmin();
+}
+
+function renderAdmin(){
+if(!requireAdmin())return;
+
+const requests=remoteRequests;
+const jobs=remoteJobs;
+const news=remoteNews;
+
+document.getElementById("adminStats").innerHTML=`
+<div class="stats">
+<div class="stat"><strong>${requests.length}</strong><span>ጥያቄዎች</span></div>
+<div class="stat"><strong>${jobs.length}</strong><span>የሥራ ማስታወቂያዎች</span></div>
+<div class="stat"><strong>${news.length}</strong><span>ማስታወቂያዎች</span></div>
+</div>`;
+
+document.getElementById("adminRequests").innerHTML=requests.length
+?requests.slice().reverse().map(r=>`
+<div class="item">
+<strong>${esc(r.name)} — ${esc(r.code)}</strong>
+<p>
+${esc(r.type)} | ${esc(r.kebele)}<br>
+${esc(r.message)}<br>
+ስልክ፦ ${esc(r.phone)}
+</p>
+<span class="tag">${esc(r.status)}</span>
+<div class="form-group">
+<label>የጥያቄ ሁኔታ ቀይር</label>
+<select onchange="updateRequest('${esc(r.id)}',this.value)">
+<option ${r.status==="ተቀባ / Received"?"selected":""}>ተቀባ / Received</option>
+<option ${r.status==="በሂደት ላይ / Processing"?"selected":""}>በሂደት ላይ / Processing</option>
+<option ${r.status==="ተጠናቋል / Completed"?"selected":""}>ተጠናቋል / Completed</option>
+</select>
+</div>
+</div>`).join("")
+:"<p>ጥያቄ የለም።</p>";
+
+document.getElementById("adminJobList").innerHTML=jobs.map(j=>`
+<div class="item">
+<strong>${esc(j.title)}</strong>
+<p>${esc(j.employer)} | ${esc(j.location)}</p>
+<button class="danger" onclick="deleteJob('${esc(j.id)}')">ሰርዝ</button>
+</div>`).join("");
+
+document.getElementById("adminNewsList").innerHTML=news.map(n=>`
+<div class="item">
+<strong>${esc(n.title)}</strong>
+<p>${esc(n.description)}</p>
+<button class="danger" onclick="deleteNews('${esc(n.id)}')">ሰርዝ</button>
+</div>`).join("");
+}
+
+async function refreshAdminData(){
+if(!requireAdmin())return;
+
+const fb=window.GEDEB_FIREBASE;
+
+try{
+const [rq,jb,nw]=await Promise.all([
+fb.getDocs(fb.collection(fb.db,"complaints")),
+fb.getDocs(fb.collection(fb.db,"jobs")),
+fb.getDocs(fb.collection(fb.db,"announcements"))
+]);
+
+remoteRequests=rq.docs.map(d=>({id:d.id,...d.data()}));
+remoteJobs=jb.docs.map(d=>({id:d.id,...d.data()}));
+remoteNews=nw.docs.map(d=>({id:d.id,...d.data()}));
+
+renderAdmin();
+renderJobs();
+renderNews();
+
+}catch(e){
+alert("መረጃዎችን ከFirebase ማምጣት አልተቻለም፦ "+e.message);
+}
+}
+
+async function updateRequest(id,status){
+if(!requireAdmin())return;
+
+try{
+const fb=window.GEDEB_FIREBASE;
+await fb.updateDoc(fb.doc(fb.db,"complaints",id),{status});
+await refreshAdminData();
+}catch(e){
+alert("ሁኔታውን መቀየር አልተቻለም፦ "+e.message);
+}
+}
+
+async function addJob(){
+if(!requireAdmin())return;
+
+const title=document.getElementById("jobTitle").value.trim();
+const employer=document.getElementById("jobEmployer").value.trim();
+const location=document.getElementById("jobLocation").value.trim();
+const description=document.getElementById("jobDescription").value.trim();
+
+if(!title||!employer||!description){
+alert("እባክዎ አስፈላጊ መረጃዎችን ይሙሉ።");
+return;
+}
+
+try{
+const fb=window.GEDEB_FIREBASE;
+await fb.addDoc(fb.collection(fb.db,"jobs"),{
+title,employer,location,description,date:new Date().toISOString()
+});
+
+["jobTitle","jobEmployer","jobLocation","jobDescription"].forEach(id=>{
+document.getElementById(id).value="";
+});
+
+await refreshAdminData();
+alert("የሥራ ማስታወቂያው በFirebase ተቀምጧል።");
+
+}catch(e){
+alert("ማስቀመጥ አልተቻለም፦ "+e.message);
+}
+}
+
+async function deleteJob(id){
+if(!requireAdmin()||!confirm("ይህንን ማስታወቂያ ሰርዝ?"))return;
+
+try{
+const fb=window.GEDEB_FIREBASE;
+await fb.deleteDoc(fb.doc(fb.db,"jobs",id));
+await refreshAdminData();
+}catch(e){
+alert("መሰረዝ አልተቻለም፦ "+e.message);
+}
+}
+
+async function addNews(){
+if(!requireAdmin())return;
+
+const title=document.getElementById("newsTitle").value.trim();
+const description=document.getElementById("newsDescription").value.trim();
+
+if(!title||!description){
+alert("ርዕስና ዝርዝር መረጃ ያስገቡ።");
+return;
+}
+
+try{
+const fb=window.GEDEB_FIREBASE;
+await fb.addDoc(fb.collection(fb.db,"announcements"),{
+title,description,date:new Date().toISOString()
+});
+
+document.getElementById("newsTitle").value="";
+document.getElementById("newsDescription").value="";
+
+await refreshAdminData();
+alert("ማስታወቂያው በFirebase ተቀምጧል።");
+
+}catch(e){
+alert("ማስቀመጥ አልተቻለም፦ "+e.message);
+}
+}
+
+async function deleteNews(id){
+if(!requireAdmin()||!confirm("ማስታወቂያውን ሰርዝ?"))return;
+
+try{
+const fb=window.GEDEB_FIREBASE;
+await fb.deleteDoc(fb.doc(fb.db,"announcements",id));
+await refreshAdminData();
+}catch(e){
+alert("መሰረዝ አልተቻለም፦ "+e.message);
+}
+}
+
+function renderJobs(){
+const a=remoteJobs.length?remoteJobs:getData("gedebJobs");
+
+document.getElementById("jobList").innerHTML=a.length
+?a.slice().reverse().map(j=>`
+<div class="item">
+<strong>${esc(j.title)}</strong>
+<p>
+ቀጣሪ፦ ${esc(j.employer)}<br>
+ቦታ፦ ${esc(j.location)}<br>
+${esc(j.description)}
+</p>
+<span class="tag">${esc(j.date||"")}</span>
+</div>`).join("")
+:"<p>እስካሁን የተጨመረ የሥራ ማስታወቂያ የለም።</p>";
+}
+
+function renderNews(){
+const a=remoteNews.length?remoteNews:getData("gedebNews");
+
+const h=a.length
+?a.slice().reverse().map(n=>`
+<div class="item">
+<strong>${esc(n.title)}</strong>
+<p>${esc(n.description)}</p>
+<span class="tag">${esc(n.date||"")}</span>
+</div>`).join("")
+:"<p>ማስታወቂያ የለም።</p>";
+
+document.getElementById("announcementList").innerHTML=h;
+document.getElementById("homeAnnouncements").innerHTML=h;
+}
+
+function searchMap(){
+const q=document.getElementById("mapSearch").value.trim();
+
+if(!q){
+alert("የሚፈልጉትን ቦታ ያስገቡ።");
+return;
+}
+
+window.open(
+"https://www.openstreetmap.org/search?query="+encodeURIComponent(q+" Gedeb Ethiopia"),
+"_blank",
+"noopener"
+);
+}
+
+function askAI(){
+const q=document.getElementById("aiQuestion").value.trim();
+if(!q)return;
+
+const x=q.toLowerCase();
+
+let a="ይህንን ጥያቄ በትክክል ለመመለስ ከተረጋገጠ የወረዳ መረጃና ከእውነተኛ AI ጋር መገናኘት ያስፈልጋል።";
+
+if(x.includes("ቀበሌ")||x.includes("kebele"))
+a="GEDEB ONE 11 ቀበሌዎችን ይዟል። በቀበሌዎች ገጽ ዝርዝራቸውን ይመልከቱ።";
+else if(x.includes("ሥራ")||x.includes("ስራ")||x.includes("job"))
+a="የሥራ ማስታወቂያዎችን በየሥራ ማዕከል ገጽ ይመልከቱ።";
+else if(x.includes("ቅሬታ")||x.includes("ጥያቄ"))
+a="ቅሬታ ወይም ጥያቄ ለማቅረብ የቅሬታ ገጹን ይጠቀሙ።";
+else if(x.includes("ካርታ")||x.includes("map"))
+a="የገደብ ካርታን ለመፈለግ Digital Map ገጹን ይጠቀሙ።";
+
+document.getElementById("aiChat").innerHTML=
+"<strong>እርስዎ፦</strong> "+esc(q)+
+"<hr><strong>GEDEB AI፦</strong> "+esc(a);
+
+document.getElementById("aiQuestion").value="";
+}
+
+document.getElementById("adminLoginForm").addEventListener("submit",async e=>{
+e.preventDefault();
+
+const msg=document.getElementById("adminLoginMessage");
+const btn=document.getElementById("adminLoginButton");
+
+msg.classList.remove("hidden");
+msg.textContent="መግቢያውን በማረጋገጥ ላይ...";
+btn.disabled=true;
+
+try{
+const fb=window.GEDEB_FIREBASE;
+
+if(!fb)throw new Error("Firebase ገና አልተገናኘም።");
+
+const cred=await fb.signInWithEmailAndPassword(
+fb.auth,
+document.getElementById("adminEmail").value.trim(),
+document.getElementById("adminPassword").value
+);
+
+/*
+ADMIN DOCUMENT PATH:
+admin/{UID}/admins/{UID}
+*/
+
+const snap=await fb.getDoc(
+fb.doc(fb.db,"admin",cred.user.uid,"admins",cred.user.uid)
+);
+
+if(!snap.exists()||snap.data().role!=="admin"||snap.data().active!==true){
+await fb.signOut(fb.auth);
+throw new Error("ይህ መለያ የነቃ Admin ፈቃድ የለውም።");
+}
+
+adminUser=cred.user;
+isAdmin=true;
+
+msg.classList.add("hidden");
+showAdminDashboard();
+await refreshAdminData();
+
+}catch(err){
+msg.textContent="መግባት አልተቻለም፦ "+err.message;
+}finally{
+btn.disabled=false;
+}
+});
+
+async function adminLogout(){
+try{
+const fb=window.GEDEB_FIREBASE;
+if(fb)await fb.signOut(fb.auth);
+}catch(e){
+console.error(e);
+}
+
+adminUser=null;
+isAdmin=false;
+showAdminLogin();
+document.getElementById("adminPassword").value="";
+}
+
 window.adminLogout=adminLogout;
-renderServices();renderKebeles();renderJobs();renderNews();
+
+renderServices();
+renderKebeles();
+renderJobs();
+renderNews();
+
 </script>
+
 <script type="module">
 import {initializeApp} from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
-import {getAuth,signInWithEmailAndPassword,signOut,onAuthStateChanged} from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
-import {getFirestore,collection,addDoc,getDocs,doc,getDoc,updateDoc,deleteDoc} from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
-const firebaseConfig={apiKey:"AIzaSyCYPNYEuEW7wDR1K0T68t8VuimgxleeyXY",authDomain:"gedeb-one.firebaseapp.com",projectId:"gedeb-one",storageBucket:"gedeb-one.firebasestorage.app",messagingSenderId:"392069337024",appId:"1:392069337024:web:0a02a0aed21d85e3cf0225",measurementId:"G-49WPWCSL6Y"};
+
+import {
+getAuth,
+signInWithEmailAndPassword,
+signOut,
+onAuthStateChanged
+} from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
+
+import {
+getFirestore,
+collection,
+addDoc,
+getDocs,
+doc,
+getDoc,
+updateDoc,
+deleteDoc
+} from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+
+const firebaseConfig={
+apiKey:"AIzaSyCYPNYEuEW7wDR1K0T68t8VuimgxleeyXY",
+authDomain:"gedeb-one.firebaseapp.com",
+projectId:"gedeb-one",
+storageBucket:"gedeb-one.firebasestorage.app",
+messagingSenderId:"392069337024",
+appId:"1:392069337024:web:0a02a0aed21d85e3cf0225",
+measurementId:"G-49WPWCSL6Y"
+};
+
 try{
- const app=initializeApp(firebaseConfig),auth=getAuth(app),db=getFirestore(app);
- window.GEDEB_FIREBASE={app,auth,db,signInWithEmailAndPassword,signOut,onAuthStateChanged,collection,addDoc,getDocs,doc,getDoc,updateDoc,deleteDoc};
- // Public announcements and job listings are readable without signing in.
- Promise.all([getDocs(collection(db,"jobs")),getDocs(collection(db,"announcements"))]).then(([jobsSnap,newsSnap])=>{
-   remoteJobs=jobsSnap.docs.map(d=>({id:d.id,...d.data()}));
-   remoteNews=newsSnap.docs.map(d=>({id:d.id,...d.data()}));
-   renderJobs();renderNews();
- }).catch(e=>console.warn("Public content could not be loaded",e));
- onAuthStateChanged(auth,async user=>{if(!user){adminUser=null;isAdmin=false;return}try{const a=await getDoc(doc(db,"admins",user.uid));if(a.exists()&&a.data().role==="admin"&&a.data().active===true){adminUser=user;isAdmin=true;if(document.getElementById("adminModal").classList.contains("show")){showAdminDashboard();await refreshAdminData()}}else{await signOut(auth);adminUser=null;isAdmin=false}}catch(e){console.error("Admin verification failed",e);adminUser=null;isAdmin=false}});
- console.log("GEDEB ONE Firebase initialized (Auth + Firestore; Storage intentionally disabled)");
-}catch(e){console.error("Firebase initialization failed",e);window.GEDEB_FIREBASE=null}
+
+const app=initializeApp(firebaseConfig);
+const auth=getAuth(app);
+const db=getFirestore(app);
+
+window.GEDEB_FIREBASE={
+app,
+auth,
+db,
+signInWithEmailAndPassword,
+signOut,
+onAuthStateChanged,
+collection,
+addDoc,
+getDocs,
+doc,
+getDoc,
+updateDoc,
+deleteDoc
+};
+
+// Public announcements and job listings are readable without signing in.
+
+Promise.all([
+getDocs(collection(db,"jobs")),
+getDocs(collection(db,"announcements"))
+]).then(([jobsSnap,newsSnap])=>{
+
+remoteJobs=jobsSnap.docs.map(d=>({id:d.id,...d.data()}));
+remoteNews=newsSnap.docs.map(d=>({id:d.id,...d.data()}));
+
+renderJobs();
+renderNews();
+
+}).catch(e=>console.warn("Public content could not be loaded",e));
+
+onAuthStateChanged(auth,async user=>{
+
+if(!user){
+adminUser=null;
+isAdmin=false;
+return;
+}
+
+try{
+
+/*
+ADMIN DOCUMENT PATH:
+admin/{UID}/admins/{UID}
+*/
+
+const a=await getDoc(
+doc(db,"admin",user.uid,"admins",user.uid)
+);
+
+if(
+a.exists()&&
+a.data().role==="admin"&&
+a.data().active===true
+){
+
+adminUser=user;
+isAdmin=true;
+
+if(document.getElementById("adminModal").classList.contains("show")){
+showAdminDashboard();
+await refreshAdminData();
+}
+
+}else{
+
+await signOut(auth);
+adminUser=null;
+isAdmin=false;
+
+}
+
+}catch(e){
+
+console.error("Admin verification failed",e);
+adminUser=null;
+isAdmin=false;
+
+}
+
+});
+
+console.log("GEDEB ONE Firebase initialized (Auth + Firestore; Storage intentionally disabled)");
+
+}catch(e){
+
+console.error("Firebase initialization failed",e);
+window.GEDEB_FIREBASE=null;
+
+}
+
 </script>
+
 </body>
 </html>
